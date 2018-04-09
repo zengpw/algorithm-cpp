@@ -7,3 +7,18 @@ xcuserdata
 *.xccheckout
 DerivedData
 Pods/
+
+# cmake
+cmake_install.cmake
+CMakeCache.txt
+CMakeFiles
+install_manifest.txt
+*.dylib
+
+# clion
+bin
+build
+cmake-build-debug
+codeStyles
+workspace.xml
+misc.xml

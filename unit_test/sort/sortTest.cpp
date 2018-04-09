@@ -8,7 +8,7 @@
 
 #include "gtest/gtest.h"
 
-#include "bubbleSort.h"
+#include "sort/bubbleSort.h"
 
 TEST(bubbleSortTest, bubbleSort)
 {

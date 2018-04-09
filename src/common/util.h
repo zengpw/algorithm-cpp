@@ -6,11 +6,13 @@
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
-#include <iostream>
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
+
+#include <iostream>
 #include <sstream>
+#include <string>
 
 std::string array2String(int array[], int arraySize)
 {

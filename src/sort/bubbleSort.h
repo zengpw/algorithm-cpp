@@ -6,7 +6,7 @@
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
-#include "util.h"
+#include "common/util.h"
 
 void swap(int T[], int i, int j)
 {
