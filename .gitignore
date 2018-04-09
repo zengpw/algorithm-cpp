@@ -3,7 +3,6 @@
 
 # xcode
 xcuserdata
-xcshareddata
 *.xcuserstate
 *.xccheckout
 DerivedData
