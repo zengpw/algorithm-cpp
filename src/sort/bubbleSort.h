@@ -1,5 +1,5 @@
 //
-//  bubbleSort.cpp
+//  bubbleSort.h
 //  algorithm-cpp
 //
 //  Created by Vincent Zeng on 2018/4/4.
@@ -18,14 +18,14 @@ void swap(int T[], int i, int j)
 void bubbleSort(int T[], int low, int high)
 {
     //遍历序列的次数
-    for(int i = low; i <= high; i++)
+    for (int i = low; i <= high; i++)
     {
         //遍历区间 [low, high - i]
-        for(int j = low; j < high - i; j++)
+        for (int j = low; j < high - i; j++)
         {
-            if(T[j] > T[j+1])
+            if (T[j] > T[j + 1])
             {
-                swap(T, j, j+1);
+                swap(T, j, j + 1);
                 printArray(T, 10);
             }
         }
