@@ -1,4 +1,5 @@
 # algorithm-cpp
+[![Build Status](https://www.travis-ci.org/zengpw/algorithm-cpp.svg?branch=master)](https://www.travis-ci.org/zengpw/algorithm-cpp)
 ## notes
 * 个人项目，用于练习算法和数据结构
 ## dependencies
