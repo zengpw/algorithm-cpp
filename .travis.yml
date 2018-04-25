@@ -4,6 +4,7 @@ language: cpp
 matrix:
   include:
     - os: linux
+      compiler: gcc
       addons:
         apt:
           sources:
@@ -13,11 +14,6 @@ matrix:
             - g++-5
             - cmake-data
             - cmake
-      env: COMPILER=g++-5
-
-before_install:
-    - eval "${COMPILER}"
 
 script:
-  - export CXX=$COMPILER;
   - cmake .; make
