@@ -1,0 +1,23 @@
+sudo: false
+language: cpp
+
+matrix:
+  include:
+    - os: linux
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+            - george-edison55-precise-backports
+          packages:
+            - g++-5
+            - cmake-data
+            - cmake
+      env: COMPILER=g++-5
+
+before_install:
+    - eval "${COMPILER}"
+
+script:
+  - export CXX=$COMPILER;
+  - cmake .; make
