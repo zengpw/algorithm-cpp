@@ -29,3 +29,7 @@ endforeach()
 
 # create bin
 add_executable("algorithm-cpp" ${src})
+
+# add pthread support for linux
+find_package (Threads)
+target_link_libraries (algorithm-cpp ${CMAKE_THREAD_LIBS_INIT})
