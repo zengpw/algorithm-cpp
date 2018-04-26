@@ -7,14 +7,14 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 
 # include path
-include_directories("${PROJECT_SOURCE_DIR}/googletest-release-1.8.0/googletest")
-include_directories("${PROJECT_SOURCE_DIR}/googletest-release-1.8.0/googletest/include")
+include_directories("${PROJECT_SOURCE_DIR}/unit_test/googletest/googletest")
+include_directories("${PROJECT_SOURCE_DIR}/unit_test/googletest/googletest/include")
 include_directories("${PROJECT_SOURCE_DIR}/src")
 
 # source files
 file(GLOB_RECURSE src "${PROJECT_SOURCE_DIR}/src/*.cpp")
-file(GLOB_RECURSE gtest "googletest-release-1.8.0/googletest/src/gtest-all.cc")
-file(GLOB_RECURSE gtest_main "googletest-release-1.8.0/googletest/src/gtest_main.cc")
+file(GLOB_RECURSE gtest "unit_test/googletest/googletest/src/gtest-all.cc")
+file(GLOB_RECURSE gtest_main "unit_test/googletest/googletest/src/gtest_main.cc")
 file(GLOB_RECURSE unit_test "${PROJECT_SOURCE_DIR}/unit_test/*.cpp")
 
 list(APPEND src ${gtest})

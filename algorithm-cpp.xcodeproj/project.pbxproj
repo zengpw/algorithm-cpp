@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		C043C2892074AD5A00E28595 /* intUtil.h in Sources */ = {isa = PBXBuildFile; fileRef = C043C2882074AD5A00E28595 /* intUtil.h */; };
 		C043C28C2074AFF600E28595 /* sortTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C043C28B2074AFF600E28595 /* sortTest.cpp */; };
-		C043C28E2074B06E00E28595 /* gtest_main.cc in Sources */ = {isa = PBXBuildFile; fileRef = C043C28D2074B06E00E28595 /* gtest_main.cc */; };
 		C06DC4C020747DE10085EFFB /* bubbleSort.h in Sources */ = {isa = PBXBuildFile; fileRef = C06DC4BF20747DE10085EFFB /* bubbleSort.h */; };
-		C06DC4C42074A60F0085EFFB /* gtest-all.cc in Sources */ = {isa = PBXBuildFile; fileRef = C06DC4C32074A60F0085EFFB /* gtest-all.cc */; };
+		C0E21B2F20919D52004CD47B /* gtest_main.cc in Sources */ = {isa = PBXBuildFile; fileRef = C0E21B2D20919D52004CD47B /* gtest_main.cc */; };
+		C0E21B3020919D52004CD47B /* gtest-all.cc in Sources */ = {isa = PBXBuildFile; fileRef = C0E21B2E20919D52004CD47B /* gtest-all.cc */; };
 		C0ECDEAD209177A300C4E02C /* insertionSort.h in Sources */ = {isa = PBXBuildFile; fileRef = C0ECDEAC209177A300C4E02C /* insertionSort.h */; };
 /* End PBXBuildFile section */
 
@@ -30,10 +30,10 @@
 /* Begin PBXFileReference section */
 		C043C2882074AD5A00E28595 /* intUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = intUtil.h; sourceTree = "<group>"; };
 		C043C28B2074AFF600E28595 /* sortTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sortTest.cpp; sourceTree = "<group>"; };
-		C043C28D2074B06E00E28595 /* gtest_main.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gtest_main.cc; path = "googletest-release-1.8.0/googletest/src/gtest_main.cc"; sourceTree = "<group>"; };
 		C06CEB322074738A0099ABE5 /* algorithm-cpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "algorithm-cpp"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06DC4BF20747DE10085EFFB /* bubbleSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bubbleSort.h; sourceTree = "<group>"; };
-		C06DC4C32074A60F0085EFFB /* gtest-all.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "gtest-all.cc"; path = "googletest-release-1.8.0/googletest/src/gtest-all.cc"; sourceTree = "<group>"; };
+		C0E21B2D20919D52004CD47B /* gtest_main.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gtest_main.cc; path = unit_test/googletest/googletest/src/gtest_main.cc; sourceTree = "<group>"; };
+		C0E21B2E20919D52004CD47B /* gtest-all.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "gtest-all.cc"; path = "unit_test/googletest/googletest/src/gtest-all.cc"; sourceTree = "<group>"; };
 		C0ECDEAC209177A300C4E02C /* insertionSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = insertionSort.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,8 +51,8 @@
 		C02F083B207475B300C28E19 /* googletest */ = {
 			isa = PBXGroup;
 			children = (
-				C043C28D2074B06E00E28595 /* gtest_main.cc */,
-				C06DC4C32074A60F0085EFFB /* gtest-all.cc */,
+				C0E21B2D20919D52004CD47B /* gtest_main.cc */,
+				C0E21B2E20919D52004CD47B /* gtest-all.cc */,
 			);
 			name = googletest;
 			sourceTree = "<group>";
@@ -175,10 +175,10 @@
 			files = (
 				C06DC4C020747DE10085EFFB /* bubbleSort.h in Sources */,
 				C043C2892074AD5A00E28595 /* intUtil.h in Sources */,
-				C06DC4C42074A60F0085EFFB /* gtest-all.cc in Sources */,
-				C043C28E2074B06E00E28595 /* gtest_main.cc in Sources */,
 				C043C28C2074AFF600E28595 /* sortTest.cpp in Sources */,
+				C0E21B2F20919D52004CD47B /* gtest_main.cc in Sources */,
 				C0ECDEAD209177A300C4E02C /* insertionSort.h in Sources */,
+				C0E21B3020919D52004CD47B /* gtest-all.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,10 +300,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/googletest-release-1.8.0/googletest/include",
-					"$(SRCROOT)/googletest-release-1.8.0/googletest",
-					"$(SRCROOT)/googletest-release-1.8.0/googlemock/include",
-					"$(SRCROOT)/googletest-release-1.8.0/googlemock",
+					"$(SRCROOT)/unit_test/googletest/googletest/include",
+					"$(SRCROOT)/unit_test/googletest/googletest",
+					"$(SRCROOT)/unit_test/googletest/googlemock/include",
+					"$(SRCROOT)/unit_test/googletest/googlemock",
 					"$(SRCROOT)/src",
 				);
 			};
@@ -315,10 +315,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/googletest-release-1.8.0/googletest/include",
-					"$(SRCROOT)/googletest-release-1.8.0/googletest",
-					"$(SRCROOT)/googletest-release-1.8.0/googlemock/include",
-					"$(SRCROOT)/googletest-release-1.8.0/googlemock",
+					"$(SRCROOT)/unit_test/googletest/googletest/include",
+					"$(SRCROOT)/unit_test/googletest/googletest",
+					"$(SRCROOT)/unit_test/googletest/googlemock/include",
+					"$(SRCROOT)/unit_test/googletest/googlemock",
 					"$(SRCROOT)/src",
 				);
 			};
