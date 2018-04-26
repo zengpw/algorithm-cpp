@@ -1,10 +1,13 @@
 //
-//  util.h
+//  intUtil.h
 //  algorithm-cpp
 //
 //  Created by Vincent Zeng on 2018/4/4.
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
+
+#ifndef intUtil_h
+#define intUtil_h
 
 #include <stdlib.h>
 #include <string.h>
@@ -14,7 +17,16 @@
 #include <sstream>
 #include <string>
 
-std::string array2String(int array[], int arraySize)
+void swapIntArrayElement(int array[], int i, int j)
+{
+    int k = array[i];
+    array[i] = array[j];
+    array[j] = k;
+    
+    return;
+}
+
+std::string intArray2String(int array[], int arraySize)
 {
     std::stringstream ss;
     std::string arrayString;
@@ -33,9 +45,10 @@ std::string array2String(int array[], int arraySize)
     return arrayString;
 }
 
-void printArray(int array[], int arraySize)
+void printIntArray(int array[], int arraySize)
 {
-    std::cout << "Array = " << array2String(array, arraySize) << std::endl;
-
+    std::cout << "Array = " << intArray2String(array, arraySize) << std::endl;
     return;
 }
+
+#endif

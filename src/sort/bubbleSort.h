@@ -6,27 +6,22 @@
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
-#include "common/util.h"
+#include "common/intUtil.h"
 
-void swap(int T[], int i, int j)
+void bubbleSort(int array[], int low, int high)
 {
-    int k = T[i];
-    T[i] = T[j];
-    T[j] = k;
-}
-
-void bubbleSort(int T[], int low, int high)
-{
-    //遍历序列的次数
+    int arraySize = high - low + 1;
+    
+    // 遍历序列的次数
     for (int i = low; i <= high; i++)
     {
-        //遍历区间 [low, high - i]
+        // 遍历区间 [low, high - i]
         for (int j = low; j < high - i; j++)
         {
-            if (T[j] > T[j + 1])
+            if (array[j] > array[j + 1])
             {
-                swap(T, j, j + 1);
-                printArray(T, 10);
+                swapIntArrayElement(array, j, j + 1);
+                printIntArray(array, arraySize);
             }
         }
     }
