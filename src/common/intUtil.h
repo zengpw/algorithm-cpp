@@ -17,23 +17,23 @@
 #include <sstream>
 #include <string>
 
-void swapIntArrayElement(int array[], int i, int j)
+void swapIntArrayElement(int *array, int i, int j)
 {
-    int k = array[i];
-    array[i] = array[j];
-    array[j] = k;
+    int k = *(array + i);
+    *(array + i) = *(array + j);
+    *(array + j) = k;
     
     return;
 }
 
-std::string intArray2String(int array[], int arraySize)
+std::string intArray2String(const int *array, int arraySize)
 {
     std::stringstream ss;
     std::string arrayString;
 
     for (int i = 0; i < arraySize; i++)
     {
-        ss << array[i];
+        ss << *(array + i);
         arrayString += ss.str();
         arrayString += " ";
 
@@ -45,7 +45,7 @@ std::string intArray2String(int array[], int arraySize)
     return arrayString;
 }
 
-void printIntArray(int array[], int arraySize)
+void printIntArray(const int *array, int arraySize)
 {
     std::cout << "Array = " << intArray2String(array, arraySize) << std::endl;
     return;
