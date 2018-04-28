@@ -4,9 +4,9 @@
 ## Dependencies
 * [gtest 1.8.0](https://github.com/google/googletest/tree/release-1.8.0)
 ## Environment
-### Win
+#### Win
 > You can also using any other GNU compilers + [CMake](https://cmake.org/)
 * [MinGW](https://nuwen.net/mingw.html)
 * [CLion](https://www.jetbrains.com/clion)
-### Mac
+#### Mac
 * [XCode](https://developer.apple.com/xcode/)
