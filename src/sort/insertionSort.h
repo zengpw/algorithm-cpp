@@ -11,7 +11,7 @@
 void insertionSort(int array[], int low, int high)
 {
     int arraySize = high - low + 1;
-
+    
     // 外层无序区 [i, high]
     for (int i = low + 1; i <= high; i++)
     {
@@ -35,3 +35,4 @@ void insertionSort(int array[], int low, int high)
         }
     }
 }
+

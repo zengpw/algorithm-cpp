@@ -30,18 +30,23 @@ std::string intArray2String(const int *array, int arraySize)
 {
     std::stringstream ss;
     std::string arrayString;
-
+    
     for (int i = 0; i < arraySize; i++)
     {
         ss << *(array + i);
+        
         arrayString += ss.str();
-        arrayString += " ";
-
+        
+        if (i < arraySize - 1)
+        {
+            arrayString += " ";
+        }
+        
         // clear buffer
         ss.str("");
         ss.clear();
     }
-
+    
     return arrayString;
 }
 
@@ -52,3 +57,4 @@ void printIntArray(const int *array, int arraySize)
 }
 
 #endif
+

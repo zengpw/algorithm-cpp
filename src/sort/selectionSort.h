@@ -11,17 +11,17 @@
 void selectionSort(int array[], int low, int high)
 {
     int arraySize = high - low + 1;
-
+    
     for (int i = low; i <= high; i++)
     {
         int k = i;
-        //每次都在区间 [i, high]中查找最小的
+        //每次都在区间 [i, high] 中查找最小的
         for (int j = i + 1; j <= high; j++)
         {
             if (array[j] < array[k])
                 k = j;
         }
-        //假如 array[i]不是最小的，则交换
+        //假如 array[i] 不是最小的，则交换
         if (k != i)
         {
             swapIntArrayElement(array, i, k);
@@ -29,3 +29,4 @@ void selectionSort(int array[], int low, int high)
         }
     }
 }
+

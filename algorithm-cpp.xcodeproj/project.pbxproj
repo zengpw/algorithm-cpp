@@ -30,6 +30,11 @@
 /* Begin PBXFileReference section */
 		C043C2882074AD5A00E28595 /* intUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = intUtil.h; sourceTree = "<group>"; };
 		C043C28B2074AFF600E28595 /* sortTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sortTest.cpp; sourceTree = "<group>"; };
+		C04D467220940A53006E672B /* selectionSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = selectionSort.h; sourceTree = "<group>"; };
+		C04D467320940A53006E672B /* shellSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shellSort.h; sourceTree = "<group>"; };
+		C04D467420940A53006E672B /* heapSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = heapSort.h; sourceTree = "<group>"; };
+		C04D467520940A53006E672B /* quickSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quickSort.h; sourceTree = "<group>"; };
+		C04D467620940A53006E672B /* mergeSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mergeSort.h; sourceTree = "<group>"; };
 		C06CEB322074738A0099ABE5 /* algorithm-cpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "algorithm-cpp"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06DC4BF20747DE10085EFFB /* bubbleSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bubbleSort.h; sourceTree = "<group>"; };
 		C0E21B2D20919D52004CD47B /* gtest_main.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gtest_main.cc; path = unit_test/googletest/googletest/src/gtest_main.cc; sourceTree = "<group>"; };
@@ -65,12 +70,12 @@
 			path = common;
 			sourceTree = "<group>";
 		};
-		C043C28A2074AFCB00E28595 /* sort */ = {
+		C043C28A2074AFCB00E28595 /* sortTest */ = {
 			isa = PBXGroup;
 			children = (
 				C043C28B2074AFF600E28595 /* sortTest.cpp */,
 			);
-			path = sort;
+			path = sortTest;
 			sourceTree = "<group>";
 		};
 		C06CEB292074738A0099ABE5 = {
@@ -94,7 +99,7 @@
 		C06DC4BE20747C7C0085EFFB /* unit_test */ = {
 			isa = PBXGroup;
 			children = (
-				C043C28A2074AFCB00E28595 /* sort */,
+				C043C28A2074AFCB00E28595 /* sortTest */,
 			);
 			path = unit_test;
 			sourceTree = "<group>";
@@ -112,7 +117,12 @@
 			isa = PBXGroup;
 			children = (
 				C06DC4BF20747DE10085EFFB /* bubbleSort.h */,
+				C04D467420940A53006E672B /* heapSort.h */,
 				C0ECDEAC209177A300C4E02C /* insertionSort.h */,
+				C04D467620940A53006E672B /* mergeSort.h */,
+				C04D467520940A53006E672B /* quickSort.h */,
+				C04D467220940A53006E672B /* selectionSort.h */,
+				C04D467320940A53006E672B /* shellSort.h */,
 			);
 			path = sort;
 			sourceTree = "<group>";

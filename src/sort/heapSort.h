@@ -13,13 +13,13 @@ void heapMin(int array[], int i, int n)
     // -------------函数有2个作用：
     //  * 初次建堆时，从后开始整理分支结点，实际上不需要循环处理孩子结点
     //  * 从堆顶删除元素（进行排序）时，从堆顶开始重新建堆
-
+    
     // 结点 i 的左右孩子结点位置分别为 2i + 1, 2i + 2
     while ((2 * i + 1) < n)
     {
         // 存储下一次需要处理的子结点，默认左子树
         int k = 2 * i + 1;
-
+        
         // 如果存在右孩子结点，则选择一个较小的和根结点比较
         // 如果不存在，则直接比较
         if ((2 * i + 2) < n)
@@ -48,11 +48,11 @@ void heapMin(int array[], int i, int n)
                 swapIntArrayElement(array, i, 2 * i + 1);
             }
         }
-
+        
         // 移动到发生了交换的子树继续处理（针对情况2）
         i = k;
     }
-
+    
     printIntArray(array, n);
 }
 
@@ -65,7 +65,7 @@ void heapSort(int array[], int arraySize)
     {
         heapMin(array, i, arraySize);
     }
-
+    
     // ------------堆排序
     // 使用场景：新元素插入数组最后一个位置以后
     // 首先 swap(堆顶，无序区最后一个数据)
@@ -74,10 +74,11 @@ void heapSort(int array[], int arraySize)
     {
         swapIntArrayElement(array, 0, i);
         printIntArray(array, i);
-
+        
         // 此处的 i 代表无序区的长度
         heapMin(array, 0, i);
-
+        
         printIntArray(array, arraySize);
     }
 }
+

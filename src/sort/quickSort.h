@@ -14,13 +14,13 @@ void quickSort(int array[], int low, int high)
     // 如果序列大小为1，则退出
     if (low >= high)
         return;
-
+    
     // 选择中轴的值
     int pivot = array[low];
     // 待排序的序列区间
     int i = low + 1;
     int j = high;
-
+    
     // 扫描序列，与中轴进行比较
     // 存在2种场景：
     //  * 被中轴分成2个区间
@@ -39,13 +39,13 @@ void quickSort(int array[], int low, int high)
         else
             break;
     }
-
+    
     // 只有在中轴大于左区间最大值的情况下，才移动中轴
     if (pivot > array[j])
     {
         swapIntArrayElement(array, low, j);
     }
-
+    
     quickSort(array, low, j - 1);
     quickSort(array, i, high);
 }
@@ -115,3 +115,4 @@ void quickSort(int array[], int low, int high)
 //    quickSort3Way(array, ++l, j);
 //    quickSort3Way(array, i, r);
 //}
+
