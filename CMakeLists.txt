@@ -12,11 +12,13 @@ include_directories("${PROJECT_SOURCE_DIR}/unit_test/googletest/googletest/inclu
 include_directories("${PROJECT_SOURCE_DIR}/src")
 
 # source files
-file(GLOB_RECURSE src "${PROJECT_SOURCE_DIR}/src/sort/*.h")
+file(GLOB_RECURSE src "${PROJECT_SOURCE_DIR}/src/common/*.h")
+file(GLOB_RECURSE sort "${PROJECT_SOURCE_DIR}/src/sort/*.h")
 file(GLOB_RECURSE gtest "unit_test/googletest/googletest/src/gtest-all.cc")
 file(GLOB_RECURSE gtest_main "unit_test/googletest/googletest/src/gtest_main.cc")
 file(GLOB_RECURSE sort_test "${PROJECT_SOURCE_DIR}/unit_test/sortTest/*.cpp")
 
+list(APPEND src ${sort})
 list(APPEND src ${gtest})
 list(APPEND src ${gtest_main})
 list(APPEND src ${sort_test})
