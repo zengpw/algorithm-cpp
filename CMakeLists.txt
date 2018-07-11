@@ -1,37 +1,43 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required (VERSION 3.6)
+
 project(algorithm-cpp)
 
-set(CMAKE_CXX_STANDARD 11)
-set(PROJECT_BINARY_DIR ${PROJECT_SOURCE_DIR}/build)
-set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
-set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
+# Include
+include(${PROJECT_SOURCE_DIR}/cmake/file.util.cmake)
 
-# include path
-include_directories("${PROJECT_SOURCE_DIR}/unit_test/googletest/googletest")
-include_directories("${PROJECT_SOURCE_DIR}/unit_test/googletest/googletest/include")
-include_directories("${PROJECT_SOURCE_DIR}/src")
+# Compiler
+set(CMAKE_POSITION_INDEPENDENT_CODE TRUE)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-# source files
-file(GLOB_RECURSE src "${PROJECT_SOURCE_DIR}/src/common/*.h")
-file(GLOB_RECURSE sort "${PROJECT_SOURCE_DIR}/src/sort/*.h")
-file(GLOB_RECURSE gtest "unit_test/googletest/googletest/src/gtest-all.cc")
-file(GLOB_RECURSE gtest_main "unit_test/googletest/googletest/src/gtest_main.cc")
-file(GLOB_RECURSE sort_test "${PROJECT_SOURCE_DIR}/unit_test/sortTest/*.cpp")
+if(CMAKE_BUILD_TYPE STREQUAL "DEBUG")
+	set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -DDEBUG")
+endif()
 
-list(APPEND src ${sort})
-list(APPEND src ${gtest})
-list(APPEND src ${gtest_main})
-list(APPEND src ${sort_test})
+# Sources
+append_source_list(src_list SRC_PATH ${PROJECT_SOURCE_DIR}/include/*.h)
+append_source_list(src_list SRC_PATH ${PROJECT_SOURCE_DIR}/third/googletest/googletest/src/gtest-all.cc)
+append_source_list(src_list SRC_PATH ${PROJECT_SOURCE_DIR}/third/googletest/googletest/src/gtest_main.cc)
+append_source_list(src_list SRC_PATH ${PROJECT_SOURCE_DIR}/unit_test/sortTest/*.cpp)
 
-message(STATUS "------------- Source Files: -------------")
+# Targets
+add_executable(${PROJECT_NAME} ${src_list})
 
-foreach(s ${src})
-    message(${s})
-endforeach()
+# Header Paths
+set(common_inc_path ${PROJECT_SOURCE_DIR}
+                    ${PROJECT_SOURCE_DIR}/include
+                    ${PROJECT_SOURCE_DIR}/third/googletest/googletest/include
+                    ${PROJECT_SOURCE_DIR}/third/googletest/googletest
+                    ${PROJECT_SOURCE_DIR}/third/googletest/googlemock/include
+                    ${PROJECT_SOURCE_DIR}/third/googletest/googlemock
+    )
 
-# create bin
-add_executable("algorithm-cpp" ${src})
+target_include_directories(${PROJECT_NAME} PUBLIC
+	${common_inc_path}
+    )
 
-# add pthread support for linux
-find_package (Threads)
-target_link_libraries (algorithm-cpp ${CMAKE_THREAD_LIBS_INIT})
+# Dependencies
+find_package(Threads)
+
+target_link_libraries(${PROJECT_NAME}
+    ${CMAKE_THREAD_LIBS_INIT}
+    )

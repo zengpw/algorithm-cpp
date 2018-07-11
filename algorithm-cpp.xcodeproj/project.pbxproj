@@ -7,12 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C043C2892074AD5A00E28595 /* intUtil.h in Sources */ = {isa = PBXBuildFile; fileRef = C043C2882074AD5A00E28595 /* intUtil.h */; };
 		C043C28C2074AFF600E28595 /* sortTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C043C28B2074AFF600E28595 /* sortTest.cpp */; };
-		C06DC4C020747DE10085EFFB /* bubbleSort.h in Sources */ = {isa = PBXBuildFile; fileRef = C06DC4BF20747DE10085EFFB /* bubbleSort.h */; };
-		C0E21B2F20919D52004CD47B /* gtest_main.cc in Sources */ = {isa = PBXBuildFile; fileRef = C0E21B2D20919D52004CD47B /* gtest_main.cc */; };
-		C0E21B3020919D52004CD47B /* gtest-all.cc in Sources */ = {isa = PBXBuildFile; fileRef = C0E21B2E20919D52004CD47B /* gtest-all.cc */; };
-		C0ECDEAD209177A300C4E02C /* insertionSort.h in Sources */ = {isa = PBXBuildFile; fileRef = C0ECDEAC209177A300C4E02C /* insertionSort.h */; };
+		C0E05CB520F5E5C40043DE1E /* gtest_main.cc in Sources */ = {isa = PBXBuildFile; fileRef = C0E05CB320F5E5C40043DE1E /* gtest_main.cc */; };
+		C0E05CB620F5E5C40043DE1E /* gtest-all.cc in Sources */ = {isa = PBXBuildFile; fileRef = C0E05CB420F5E5C40043DE1E /* gtest-all.cc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,18 +25,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C043C2882074AD5A00E28595 /* intUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = intUtil.h; sourceTree = "<group>"; };
 		C043C28B2074AFF600E28595 /* sortTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sortTest.cpp; sourceTree = "<group>"; };
-		C04D467220940A53006E672B /* selectionSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = selectionSort.h; sourceTree = "<group>"; };
-		C04D467320940A53006E672B /* shellSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shellSort.h; sourceTree = "<group>"; };
-		C04D467420940A53006E672B /* heapSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = heapSort.h; sourceTree = "<group>"; };
-		C04D467520940A53006E672B /* quickSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quickSort.h; sourceTree = "<group>"; };
-		C04D467620940A53006E672B /* mergeSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mergeSort.h; sourceTree = "<group>"; };
 		C06CEB322074738A0099ABE5 /* algorithm-cpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "algorithm-cpp"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C06DC4BF20747DE10085EFFB /* bubbleSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bubbleSort.h; sourceTree = "<group>"; };
-		C0E21B2D20919D52004CD47B /* gtest_main.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gtest_main.cc; path = unit_test/googletest/googletest/src/gtest_main.cc; sourceTree = "<group>"; };
-		C0E21B2E20919D52004CD47B /* gtest-all.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "gtest-all.cc"; path = "unit_test/googletest/googletest/src/gtest-all.cc"; sourceTree = "<group>"; };
-		C0ECDEAC209177A300C4E02C /* insertionSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = insertionSort.h; sourceTree = "<group>"; };
+		C0E05CB320F5E5C40043DE1E /* gtest_main.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gtest_main.cc; path = third/googletest/googletest/src/gtest_main.cc; sourceTree = "<group>"; };
+		C0E05CB420F5E5C40043DE1E /* gtest-all.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "gtest-all.cc"; path = "third/googletest/googletest/src/gtest-all.cc"; sourceTree = "<group>"; };
+		C0E05CBA20F5E5EF0043DE1E /* intUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = intUtil.h; path = include/util/intUtil.h; sourceTree = SOURCE_ROOT; };
+		C0E05CBB20F5E5FA0043DE1E /* selectionSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = selectionSort.h; path = include/sort/selectionSort.h; sourceTree = SOURCE_ROOT; };
+		C0E05CBC20F5E5FA0043DE1E /* heapSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = heapSort.h; path = include/sort/heapSort.h; sourceTree = SOURCE_ROOT; };
+		C0E05CBD20F5E5FA0043DE1E /* shellSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shellSort.h; path = include/sort/shellSort.h; sourceTree = SOURCE_ROOT; };
+		C0E05CBE20F5E5FA0043DE1E /* quickSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = quickSort.h; path = include/sort/quickSort.h; sourceTree = SOURCE_ROOT; };
+		C0E05CBF20F5E5FA0043DE1E /* insertionSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = insertionSort.h; path = include/sort/insertionSort.h; sourceTree = SOURCE_ROOT; };
+		C0E05CC020F5E5FA0043DE1E /* bubbleSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bubbleSort.h; path = include/sort/bubbleSort.h; sourceTree = SOURCE_ROOT; };
+		C0E05CC120F5E5FA0043DE1E /* mergeSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mergeSort.h; path = include/sort/mergeSort.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,21 +50,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C02F083B207475B300C28E19 /* googletest */ = {
+		C02F083B207475B300C28E19 /* third */ = {
 			isa = PBXGroup;
 			children = (
-				C0E21B2D20919D52004CD47B /* gtest_main.cc */,
-				C0E21B2E20919D52004CD47B /* gtest-all.cc */,
+				C0E05CB220F5E5A50043DE1E /* googletest */,
 			);
-			name = googletest;
-			sourceTree = "<group>";
-		};
-		C043C2872074AD2700E28595 /* common */ = {
-			isa = PBXGroup;
-			children = (
-				C043C2882074AD5A00E28595 /* intUtil.h */,
-			);
-			path = common;
+			name = third;
 			sourceTree = "<group>";
 		};
 		C043C28A2074AFCB00E28595 /* sortTest */ = {
@@ -81,9 +69,9 @@
 		C06CEB292074738A0099ABE5 = {
 			isa = PBXGroup;
 			children = (
-				C0D8FB102074753F00B9F372 /* src */,
+				C0E05CB720F5E5CE0043DE1E /* include */,
 				C06DC4BE20747C7C0085EFFB /* unit_test */,
-				C02F083B207475B300C28E19 /* googletest */,
+				C02F083B207475B300C28E19 /* third */,
 				C06CEB332074738A0099ABE5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,27 +92,45 @@
 			path = unit_test;
 			sourceTree = "<group>";
 		};
-		C0D8FB102074753F00B9F372 /* src */ = {
+		C0E05CB220F5E5A50043DE1E /* googletest */ = {
 			isa = PBXGroup;
 			children = (
-				C043C2872074AD2700E28595 /* common */,
-				C0D8FB112074754500B9F372 /* sort */,
+				C0E05CB320F5E5C40043DE1E /* gtest_main.cc */,
+				C0E05CB420F5E5C40043DE1E /* gtest-all.cc */,
 			);
-			path = src;
+			name = googletest;
 			sourceTree = "<group>";
 		};
-		C0D8FB112074754500B9F372 /* sort */ = {
+		C0E05CB720F5E5CE0043DE1E /* include */ = {
 			isa = PBXGroup;
 			children = (
-				C06DC4BF20747DE10085EFFB /* bubbleSort.h */,
-				C04D467420940A53006E672B /* heapSort.h */,
-				C0ECDEAC209177A300C4E02C /* insertionSort.h */,
-				C04D467620940A53006E672B /* mergeSort.h */,
-				C04D467520940A53006E672B /* quickSort.h */,
-				C04D467220940A53006E672B /* selectionSort.h */,
-				C04D467320940A53006E672B /* shellSort.h */,
+				C0E05CB920F5E5E00043DE1E /* util */,
+				C0E05CB820F5E5DA0043DE1E /* sort */,
+			);
+			name = include;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		C0E05CB820F5E5DA0043DE1E /* sort */ = {
+			isa = PBXGroup;
+			children = (
+				C0E05CC020F5E5FA0043DE1E /* bubbleSort.h */,
+				C0E05CBC20F5E5FA0043DE1E /* heapSort.h */,
+				C0E05CBF20F5E5FA0043DE1E /* insertionSort.h */,
+				C0E05CC120F5E5FA0043DE1E /* mergeSort.h */,
+				C0E05CBE20F5E5FA0043DE1E /* quickSort.h */,
+				C0E05CBB20F5E5FA0043DE1E /* selectionSort.h */,
+				C0E05CBD20F5E5FA0043DE1E /* shellSort.h */,
 			);
 			path = sort;
+			sourceTree = "<group>";
+		};
+		C0E05CB920F5E5E00043DE1E /* util */ = {
+			isa = PBXGroup;
+			children = (
+				C0E05CBA20F5E5EF0043DE1E /* intUtil.h */,
+			);
+			path = util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,12 +189,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C06DC4C020747DE10085EFFB /* bubbleSort.h in Sources */,
-				C043C2892074AD5A00E28595 /* intUtil.h in Sources */,
 				C043C28C2074AFF600E28595 /* sortTest.cpp in Sources */,
-				C0E21B2F20919D52004CD47B /* gtest_main.cc in Sources */,
-				C0ECDEAD209177A300C4E02C /* insertionSort.h in Sources */,
-				C0E21B3020919D52004CD47B /* gtest-all.cc in Sources */,
+				C0E05CB520F5E5C40043DE1E /* gtest_main.cc in Sources */,
+				C0E05CB620F5E5C40043DE1E /* gtest-all.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,11 +313,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/unit_test/googletest/googletest/include",
-					"$(SRCROOT)/unit_test/googletest/googletest",
-					"$(SRCROOT)/unit_test/googletest/googlemock/include",
-					"$(SRCROOT)/unit_test/googletest/googlemock",
-					"$(SRCROOT)/src",
+					"$(SRCROOT)/third/googletest/googletest/include",
+					"$(SRCROOT)/third/googletest/googletest",
+					"$(SRCROOT)/third/googletest/googlemock/include",
+					"$(SRCROOT)/third/googletest/googlemock",
+					"$(SRCROOT)/include",
 				);
 			};
 			name = Debug;
@@ -325,11 +328,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/unit_test/googletest/googletest/include",
-					"$(SRCROOT)/unit_test/googletest/googletest",
-					"$(SRCROOT)/unit_test/googletest/googlemock/include",
-					"$(SRCROOT)/unit_test/googletest/googlemock",
-					"$(SRCROOT)/src",
+					"$(SRCROOT)/third/googletest/googletest/include",
+					"$(SRCROOT)/third/googletest/googletest",
+					"$(SRCROOT)/third/googletest/googlemock/include",
+					"$(SRCROOT)/third/googletest/googlemock",
+					"$(SRCROOT)/include",
 				);
 			};
 			name = Release;

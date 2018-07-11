@@ -6,7 +6,7 @@
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
-#include "common/intUtil.h"
+#include "util/intUtil.h"
 
 void shellSort(int array[], int low, int high)
 {
