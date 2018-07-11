@@ -11,7 +11,9 @@
 * [MinGW](https://nuwen.net/mingw.html)
 * [CLion](https://www.jetbrains.com/clion)
 #### Mac
-* [XCode](https://developer.apple.com/xcode/)
+* [CMake](https://cmake.org/) or [XCode](https://developer.apple.com/xcode/)
+#### Linux
+* [CMake](https://cmake.org/)
 
 ## Run
 #### Mac(Command Line)
@@ -19,3 +21,6 @@
 * Execute ./build/algorithm-cpp
 #### Mac(XCode)
 * Open algorithm-cpp.xcodeproj by XCode
+#### Linux(Command Line)
+* Execute ./build_macOS.sh
+* Execute ./build/algorithm-cpp
