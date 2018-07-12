@@ -6,6 +6,9 @@
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
+#ifndef sort_mergeSort_h
+#define sort_mergeSort_h
+
 #include "util/intUtil.h"
 
 void mMerge(int array[], int unsortedArray[], int low, int mid, int high)
@@ -73,4 +76,6 @@ void mergeSort(int array[], int arraySize)
     
     mSort(array, unsortedArray, 0, arraySize - 1);
 }
+
+#endif // sort_mergeSort_h
 

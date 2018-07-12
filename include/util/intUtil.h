@@ -6,8 +6,8 @@
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
-#ifndef intUtil_h
-#define intUtil_h
+#ifndef util_intUtil_h
+#define util_intUtil_h
 
 #include <stdlib.h>
 #include <string.h>
@@ -56,5 +56,5 @@ void printIntArray(const int *array, int arraySize)
     return;
 }
 
-#endif
+#endif // util_intUtil_h
 

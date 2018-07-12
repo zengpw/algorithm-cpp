@@ -6,6 +6,9 @@
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
+#ifndef sort_bubbleSort_h
+#define sort_bubbleSort_h
+
 #include "util/intUtil.h"
 
 void bubbleSort(int array[], int low, int high)
@@ -26,4 +29,6 @@ void bubbleSort(int array[], int low, int high)
         }
     }
 }
+
+#endif // sort_bubbleSort_h
 

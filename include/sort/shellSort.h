@@ -6,6 +6,9 @@
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
+#ifndef sort_shellSort_h
+#define sort_shellSort_h
+
 #include "util/intUtil.h"
 
 void shellSort(int array[], int low, int high)
@@ -46,4 +49,6 @@ void shellSort(int array[], int low, int high)
         s = s / 2;
     }
 }
+
+#endif // sort_shellSort_h
 

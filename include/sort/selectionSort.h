@@ -6,6 +6,9 @@
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
+#ifndef sort_selectionSort_h
+#define sort_selectionSort_h
+
 #include "util/intUtil.h"
 
 void selectionSort(int array[], int low, int high)
@@ -29,4 +32,6 @@ void selectionSort(int array[], int low, int high)
         }
     }
 }
+
+#endif // sort_selectionSort_h
 

@@ -6,6 +6,9 @@
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
+#ifndef sort_insertionSort_h
+#define sort_insertionSort_h
+
 #include "util/intUtil.h"
 
 void insertionSort(int array[], int low, int high)
@@ -36,3 +39,4 @@ void insertionSort(int array[], int low, int high)
     }
 }
 
+#endif // sort_insertionSort_h

@@ -6,6 +6,9 @@
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
+#ifndef sort_heapSort_h
+#define sort_heapSort_h
+
 #include "util/intUtil.h"
 
 void heapMin(int array[], int i, int n)
@@ -81,4 +84,6 @@ void heapSort(int array[], int arraySize)
         printIntArray(array, arraySize);
     }
 }
+
+#endif // sort_heapSort_h
 
