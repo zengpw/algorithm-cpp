@@ -1,7 +1,7 @@
 #
 # @file		file.util.cmake
 # @author	Vincent Zeng
-# @brief	Provide file utils for source search
+# @brief	file utils for cmake
 #
 
 include(CMakeParseArguments)
