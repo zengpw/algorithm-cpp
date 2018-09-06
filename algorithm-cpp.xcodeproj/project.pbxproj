@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C043C28C2074AFF600E28595 /* sortTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C043C28B2074AFF600E28595 /* sortTest.cpp */; };
+		C0CD3F7D21411645008A9D8A /* searchTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0CD3F7B21411644008A9D8A /* searchTest.cpp */; };
+		C0CD3F7E21411645008A9D8A /* sortTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0CD3F7C21411645008A9D8A /* sortTest.cpp */; };
 		C0E05CB520F5E5C40043DE1E /* gtest_main.cc in Sources */ = {isa = PBXBuildFile; fileRef = C0E05CB320F5E5C40043DE1E /* gtest_main.cc */; };
 		C0E05CB620F5E5C40043DE1E /* gtest-all.cc in Sources */ = {isa = PBXBuildFile; fileRef = C0E05CB420F5E5C40043DE1E /* gtest-all.cc */; };
 /* End PBXBuildFile section */
@@ -25,7 +26,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C043C28B2074AFF600E28595 /* sortTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sortTest.cpp; sourceTree = "<group>"; };
 		C06CEB322074738A0099ABE5 /* algorithm-cpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "algorithm-cpp"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07E9C2F20F602E400AC1D2F /* selectionSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = selectionSort.h; path = include/sort/selectionSort.h; sourceTree = "<group>"; };
 		C07E9C3020F602E400AC1D2F /* heapSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = heapSort.h; path = include/sort/heapSort.h; sourceTree = "<group>"; };
@@ -35,6 +35,9 @@
 		C07E9C3420F602E400AC1D2F /* bubbleSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bubbleSort.h; path = include/sort/bubbleSort.h; sourceTree = "<group>"; };
 		C07E9C3520F602E400AC1D2F /* mergeSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mergeSort.h; path = include/sort/mergeSort.h; sourceTree = "<group>"; };
 		C07E9C3620F602EC00AC1D2F /* intUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = intUtil.h; path = include/util/intUtil.h; sourceTree = "<group>"; };
+		C0CD3F7B21411644008A9D8A /* searchTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = searchTest.cpp; sourceTree = "<group>"; };
+		C0CD3F7C21411645008A9D8A /* sortTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sortTest.cpp; sourceTree = "<group>"; };
+		C0CD3F8021411855008A9D8A /* binarySearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = binarySearch.h; path = include/search/binarySearch.h; sourceTree = "<group>"; };
 		C0E05CB320F5E5C40043DE1E /* gtest_main.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gtest_main.cc; path = third/googletest/googletest/src/gtest_main.cc; sourceTree = "<group>"; };
 		C0E05CB420F5E5C40043DE1E /* gtest-all.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = "gtest-all.cc"; path = "third/googletest/googletest/src/gtest-all.cc"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,14 +61,6 @@
 			name = third;
 			sourceTree = "<group>";
 		};
-		C043C28A2074AFCB00E28595 /* sortTest */ = {
-			isa = PBXGroup;
-			children = (
-				C043C28B2074AFF600E28595 /* sortTest.cpp */,
-			);
-			path = sortTest;
-			sourceTree = "<group>";
-		};
 		C06CEB292074738A0099ABE5 = {
 			isa = PBXGroup;
 			children = (
@@ -87,7 +82,8 @@
 		C06DC4BE20747C7C0085EFFB /* unit_test */ = {
 			isa = PBXGroup;
 			children = (
-				C043C28A2074AFCB00E28595 /* sortTest */,
+				C0CD3F7B21411644008A9D8A /* searchTest.cpp */,
+				C0CD3F7C21411645008A9D8A /* sortTest.cpp */,
 			);
 			path = unit_test;
 			sourceTree = "<group>";
@@ -95,6 +91,7 @@
 		C07E9C2C20F6025000AC1D2F /* include */ = {
 			isa = PBXGroup;
 			children = (
+				C0CD3F7F21411841008A9D8A /* search */,
 				C07E9C2D20F6028900AC1D2F /* sort */,
 				C07E9C2E20F6028D00AC1D2F /* util */,
 			);
@@ -121,6 +118,14 @@
 				C07E9C3620F602EC00AC1D2F /* intUtil.h */,
 			);
 			name = util;
+			sourceTree = "<group>";
+		};
+		C0CD3F7F21411841008A9D8A /* search */ = {
+			isa = PBXGroup;
+			children = (
+				C0CD3F8021411855008A9D8A /* binarySearch.h */,
+			);
+			name = search;
 			sourceTree = "<group>";
 		};
 		C0E05CB220F5E5A50043DE1E /* googletest */ = {
@@ -188,7 +193,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C043C28C2074AFF600E28595 /* sortTest.cpp in Sources */,
+				C0CD3F7D21411645008A9D8A /* searchTest.cpp in Sources */,
+				C0CD3F7E21411645008A9D8A /* sortTest.cpp in Sources */,
 				C0E05CB520F5E5C40043DE1E /* gtest_main.cc in Sources */,
 				C0E05CB620F5E5C40043DE1E /* gtest-all.cc in Sources */,
 			);
@@ -236,6 +242,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -248,6 +255,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LLVM_LTO = NO;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -293,6 +301,8 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -300,6 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LLVM_LTO = NO;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
@@ -310,13 +321,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				LLVM_LTO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/third/googletest/googletest/include",
 					"$(SRCROOT)/third/googletest/googletest",
 					"$(SRCROOT)/third/googletest/googlemock/include",
 					"$(SRCROOT)/third/googletest/googlemock",
-					"$(SRCROOT)/include",
+					"$(SRCROOT)",
 				);
 			};
 			name = Debug;
@@ -325,13 +337,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				LLVM_LTO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/third/googletest/googletest/include",
 					"$(SRCROOT)/third/googletest/googletest",
 					"$(SRCROOT)/third/googletest/googlemock/include",
 					"$(SRCROOT)/third/googletest/googlemock",
-					"$(SRCROOT)/include",
+					"$(SRCROOT)",
 				);
 			};
 			name = Release;

@@ -17,16 +17,14 @@
 #include <sstream>
 #include <string>
 
-void swapIntArrayElement(int *array, int i, int j)
+static void swapIntArrayElement(int *array, int i, int j)
 {
     int k = *(array + i);
     *(array + i) = *(array + j);
     *(array + j) = k;
-    
-    return;
 }
 
-std::string intArray2String(const int *array, int arraySize)
+static std::string intArray2String(const int *array, int arraySize)
 {
     std::stringstream ss;
     std::string arrayString;
@@ -50,10 +48,14 @@ std::string intArray2String(const int *array, int arraySize)
     return arrayString;
 }
 
-void printIntArray(const int *array, int arraySize)
+static void printIntArray(const int *array, int arraySize)
 {
     std::cout << "Array = " << intArray2String(array, arraySize) << std::endl;
-    return;
+}
+
+static void printELement(const int *array, const int element)
+{
+    std::cout << "key = " << element << ", value = " << *(array + element) << std::endl;
 }
 
 #endif // util_intUtil_h

@@ -9,7 +9,7 @@
 #ifndef sort_mergeSort_h
 #define sort_mergeSort_h
 
-#include "util/intUtil.h"
+#include "include/util/intUtil.h"
 
 void mMerge(int array[], int unsortedArray[], int low, int mid, int high)
 {
@@ -53,8 +53,6 @@ void mMerge(int array[], int unsortedArray[], int low, int mid, int high)
 // 本实现中数据分成2部分，实际上是只在 mMerge() 函数中做排序
 void mSort(int array[], int unsortedArray[], int low, int high)
 {
-    int arraySize = high - low + 1;
-    
     if (low >= high)
         return;
     

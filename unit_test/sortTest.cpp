@@ -8,13 +8,13 @@
 
 #include "gtest/gtest.h"
 
-#include "sort/bubbleSort.h"
-#include "sort/heapSort.h"
-#include "sort/insertionSort.h"
-#include "sort/mergeSort.h"
-#include "sort/quickSort.h"
-#include "sort/selectionSort.h"
-#include "sort/shellSort.h"
+#include "include/sort/bubbleSort.h"
+#include "include/sort/heapSort.h"
+#include "include/sort/insertionSort.h"
+#include "include/sort/mergeSort.h"
+#include "include/sort/quickSort.h"
+#include "include/sort/selectionSort.h"
+#include "include/sort/shellSort.h"
 
 #define count 15
 #define arraySize sizeof(int)*count

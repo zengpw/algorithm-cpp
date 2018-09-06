@@ -17,14 +17,13 @@ endif()
 append_source_list(src_list SRC_PATH ${PROJECT_SOURCE_DIR}/include/*.h)
 append_source_list(src_list SRC_PATH ${PROJECT_SOURCE_DIR}/third/googletest/googletest/src/gtest-all.cc)
 append_source_list(src_list SRC_PATH ${PROJECT_SOURCE_DIR}/third/googletest/googletest/src/gtest_main.cc)
-append_source_list(src_list SRC_PATH ${PROJECT_SOURCE_DIR}/unit_test/sortTest/*.cpp)
+append_source_list(src_list SRC_PATH ${PROJECT_SOURCE_DIR}/unit_test/*.cpp)
 
 # Targets
 add_executable(${PROJECT_NAME} ${src_list})
 
 # Header Paths
 set(common_inc_path ${PROJECT_SOURCE_DIR}
-                    ${PROJECT_SOURCE_DIR}/include
                     ${PROJECT_SOURCE_DIR}/third/googletest/googletest/include
                     ${PROJECT_SOURCE_DIR}/third/googletest/googletest
                     ${PROJECT_SOURCE_DIR}/third/googletest/googlemock/include

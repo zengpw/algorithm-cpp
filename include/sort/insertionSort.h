@@ -9,7 +9,7 @@
 #ifndef sort_insertionSort_h
 #define sort_insertionSort_h
 
-#include "util/intUtil.h"
+#include "include/util/intUtil.h"
 
 void insertionSort(int array[], int low, int high)
 {

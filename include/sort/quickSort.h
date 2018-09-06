@@ -9,7 +9,7 @@
 #ifndef sort_quickSort_h
 #define sort_quickSort_h
 
-#include "util/intUtil.h"
+#include "include/util/intUtil.h"
 
 // 快速排序（2分区法）
 void quickSort(int array[], int low, int high)

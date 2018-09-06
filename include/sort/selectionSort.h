@@ -9,7 +9,7 @@
 #ifndef sort_selectionSort_h
 #define sort_selectionSort_h
 
-#include "util/intUtil.h"
+#include "include/util/intUtil.h"
 
 void selectionSort(int array[], int low, int high)
 {

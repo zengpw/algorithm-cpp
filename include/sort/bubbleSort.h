@@ -9,7 +9,7 @@
 #ifndef sort_bubbleSort_h
 #define sort_bubbleSort_h
 
-#include "util/intUtil.h"
+#include "include/util/intUtil.h"
 
 void bubbleSort(int array[], int low, int high)
 {

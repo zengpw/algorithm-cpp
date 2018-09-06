@@ -9,7 +9,7 @@
 #ifndef sort_heapSort_h
 #define sort_heapSort_h
 
-#include "util/intUtil.h"
+#include "include/util/intUtil.h"
 
 void heapMin(int array[], int i, int n)
 {

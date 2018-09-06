@@ -9,7 +9,7 @@
 #ifndef sort_shellSort_h
 #define sort_shellSort_h
 
-#include "util/intUtil.h"
+#include "include/util/intUtil.h"
 
 void shellSort(int array[], int low, int high)
 {
