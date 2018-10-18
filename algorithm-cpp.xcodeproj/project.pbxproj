@@ -35,6 +35,7 @@
 		C07E9C3420F602E400AC1D2F /* bubbleSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bubbleSort.h; path = include/sort/bubbleSort.h; sourceTree = "<group>"; };
 		C07E9C3520F602E400AC1D2F /* mergeSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mergeSort.h; path = include/sort/mergeSort.h; sourceTree = "<group>"; };
 		C07E9C3620F602EC00AC1D2F /* intUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = intUtil.h; path = include/util/intUtil.h; sourceTree = "<group>"; };
+		C099CAA0217739C000F30C51 /* ternarySearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ternarySearch.h; path = include/search/ternarySearch.h; sourceTree = "<group>"; };
 		C0CD3F7B21411644008A9D8A /* searchTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = searchTest.cpp; sourceTree = "<group>"; };
 		C0CD3F7C21411645008A9D8A /* sortTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sortTest.cpp; sourceTree = "<group>"; };
 		C0CD3F8021411855008A9D8A /* binarySearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = binarySearch.h; path = include/search/binarySearch.h; sourceTree = "<group>"; };
@@ -124,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				C0CD3F8021411855008A9D8A /* binarySearch.h */,
+				C099CAA0217739C000F30C51 /* ternarySearch.h */,
 			);
 			name = search;
 			sourceTree = "<group>";

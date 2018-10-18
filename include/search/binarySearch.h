@@ -13,10 +13,9 @@
 
 int binarySearch(const int array[], const int low, const int high, const int element)
 {
-    int arraySize = high - low + 1;
-    
     // 初始化中间元素位置，如果有 2 个元素在中间位置，则选择 前一个 元素 作为唯一中间元素
-    int m = low + (arraySize - 1)/2;
+    int m = low + (high - low)/2;
+    
     printELement(array, m);
     
     // 不使用递归，避免性能问题，所以需要缓存子表区间位置
