@@ -22,15 +22,15 @@ int ternarySearch(const int array[], const int low, const int high, int directio
     int m1 = low + (high - low)/3;
     int m2 = high - (high - low)/3;
     
-    printELement(array, m1);
-    printELement(array, m2);
-    
     // 不使用递归，避免性能问题，所以需要缓存子表区间位置
     int l = low;
     int r = high;
 
     while (true)
     {
+        printELement(array, m1);
+        printELement(array, m2);
+
         if (m1 == l && m2 == r)
         {
             return m1 + 1;
