@@ -19,8 +19,6 @@
 #### Mac(Command Line)
 * Execute ./build_macOS.sh
 * Execute ./build/algorithm-cpp
-#### Mac(XCode)
-* Open algorithm-cpp.xcodeproj by XCode
 #### Linux(Command Line)
 * Execute ./build_macOS.sh
 * Execute ./build/algorithm-cpp
