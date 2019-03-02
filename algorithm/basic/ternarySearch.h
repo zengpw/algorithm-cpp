@@ -6,8 +6,8 @@
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
-#ifndef search_ternarySearch_h
-#define search_ternarySearch_h
+#ifndef basic_ternarySearch_h
+#define basic_ternarySearch_h
 
 #include "util/intUtil.h"
 
@@ -50,4 +50,4 @@ int ternarySearch(const int array[], const int low, const int high, int directio
     }
 }
 
-#endif // search_ternarySearch_h
+#endif // basic_ternarySearch_h

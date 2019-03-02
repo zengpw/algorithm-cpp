@@ -15,10 +15,11 @@
 #### Linux
 * [CMake](https://cmake.org/)
 
-## Run
+## Compile & Test
 #### Mac(Command Line)
 * Execute ./build_macOS.sh
 * Execute ./build/algorithm-cpp
 #### Linux(Command Line)
 * Execute ./build_macOS.sh
 * Execute ./build/algorithm-cpp
+

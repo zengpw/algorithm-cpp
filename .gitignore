@@ -11,10 +11,12 @@ Pods/
 # cmake
 build
 CMakeFiles
-install_manifest.txt
-cmake_install.cmake
 CMakeCache.txt
+cmake_install.cmake
+install_manifest.txt
 Makefile
+
+# output
 *.dylib
 *.a
 *.so
@@ -25,3 +27,8 @@ Makefile
 .idea
 bin
 cmake-build-debug
+
+# vscode
+.vscode
+
+

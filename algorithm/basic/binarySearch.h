@@ -6,8 +6,8 @@
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
-#ifndef search_binarySearch_h
-#define search_binarySearch_h
+#ifndef basic_binarySearch_h
+#define basic_binarySearch_h
 
 #include "util/intUtil.h"
 
@@ -40,4 +40,4 @@ int binarySearch(const int array[], const int low, const int high, const int ele
     return m;
 }
 
-#endif // search_binarySearch_h
+#endif // basic_binarySearch_h
