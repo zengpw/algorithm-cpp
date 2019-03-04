@@ -14,6 +14,8 @@
 
 TEST(bfsTest, p130)
 {
+    Solution130 solution;
+
     vector<vector<char>> board = {{'X', 'X', 'X', 'X'},
                                   {'X', 'O', 'O', 'X'},
                                   {'X', 'X', 'O', 'X'},
@@ -26,7 +28,6 @@ TEST(bfsTest, p130)
                                          {'X', 'O', 'X', 'X'},
                                          {'X', 'O', 'X', 'X'}};
 
-    Solution solution;
     solution.solve(board);
 
     std::string strBoard = stlUtil::vectorVector2String<char>(board);

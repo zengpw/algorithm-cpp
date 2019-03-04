@@ -93,16 +93,6 @@ TEST(sortTest, quickSort)
     free(array);
 }
 
-//TEST(sortTest, quickSort3Way)
-//{
-//    int* array = createTestArray();
-//
-//    quickSort3Way(array, 0, count - 1);
-//    EXPECT_STREQ(intArray2String(array, count).c_str(), intArray2String(sortedArray, count).c_str());
-//
-//    free(array);
-//}
-
 TEST(sortTest, heapSort)
 {
     int* array = createTestArray();

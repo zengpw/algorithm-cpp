@@ -9,11 +9,12 @@
 #ifndef util_leetCodeUtil_h
 #define util_leetCodeUtil_h
 
+#include <algorithm>
 #include <iostream>
+#include <queue>
 #include <sstream>
 #include <string>
 #include <vector>
-#include <queue>
 
 class stlUtil
 {

@@ -1,13 +1,13 @@
 //
-//  130_surrounded_regions.h
+//  leet_code_130_surrounded_regions.h
 //  algorithm-cpp
 //
 //  Created by Vincent Zeng on 2019/2/28.
 //  Copyright © 2019 Vincent Zeng. All rights reserved.
 //
 
-#ifndef bfs_130_surrounded_regions_h
-#define bfs_130_surrounded_regions_h
+#ifndef bfs_leet_code_130_surrounded_regions_h
+#define bfs_leet_code_130_surrounded_regions_h
 
 #include "util/leetCodeUtil.h"
 
@@ -17,7 +17,7 @@ using namespace std;
 //  https://leetcode.com/problems/surrounded-regions/
 //  题意： 如果 'O' 被 'X' 包围，则将其翻转成 'X'
 //
-class Solution
+class Solution130
 {
 public:
     queue<pair<int, int>> nQueue;           // 存放标记为 'N' 的成员
@@ -116,4 +116,4 @@ private:
     }
 };
 
-#endif // bfs_130_surrounded_regions_h
+#endif // bfs_leet_code_130_surrounded_regions_h
