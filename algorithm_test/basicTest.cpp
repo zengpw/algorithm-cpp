@@ -23,15 +23,14 @@ TEST(basicTest, binarySearch)
     EXPECT_EQ(position, 5);
 }
 
-TEST(basicTest, upTernarySearch)
+TEST(basicTest, ternarySearchUp)
 {
     int position = ternarySearch(upTernaryArray, 0, count - 1, 0);
     EXPECT_EQ(position, 6);
 }
 
-TEST(basicTest, downTernarySearch)
+TEST(basicTest, ternarySearchDown)
 {
     int position = ternarySearch(downTernaryArray, 0, count - 1, 1);
     EXPECT_EQ(position, 7);
 }
-

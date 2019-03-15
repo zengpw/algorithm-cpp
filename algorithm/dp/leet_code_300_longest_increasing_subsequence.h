@@ -15,7 +15,7 @@ using namespace std;
 
 //
 //  https://leetcode.com/problems/longest-increasing-subsequence/
-//  题意： 求最长的递增子序列
+//  题意： 求一个给定序列最长的递增子序列
 //
 class Solution300
 {

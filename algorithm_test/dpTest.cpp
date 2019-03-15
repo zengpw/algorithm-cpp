@@ -10,27 +10,43 @@
 
 #include "algorithm/util/leetCodeUtil.h"
 
+#include "algorithm/dp/leet_code_279_perfect_squares.h"
 #include "algorithm/dp/leet_code_300_longest_increasing_subsequence.h"
 #include "algorithm/dp/leet_code_322_coin_change.h"
+
+TEST(dpTest, p279)
+{
+    Solution279 solution;
+
+    int input1 = 12;
+    int expectResult1 = 3;
+    int result1 = solution.numSquares(input1);
+    EXPECT_EQ(result1, expectResult1);
+
+    int input2 = 13;
+    int expectResult2 = 2;
+    int result2 = solution.numSquares(input2);
+    EXPECT_EQ(result2, expectResult2);
+}
 
 TEST(dpTest, p300)
 {
     Solution300 solution;
 
-    vector<int> nums;
-    int expectResult = 0;
-    int result = solution.lengthOfLIS(nums);
-    EXPECT_EQ(result, expectResult);
-
-    vector<int> nums1 = {0};
-    int expectResult1 = 1;
+    vector<int> nums1;
+    int expectResult1 = 0;
     int result1 = solution.lengthOfLIS(nums1);
     EXPECT_EQ(result1, expectResult1);
 
-    vector<int> nums2 = {10, 9, 2, 5, 3, 7, 101, 18};
-    int expectResult2 = 4;
+    vector<int> nums2 = {0};
+    int expectResult2 = 1;
     int result2 = solution.lengthOfLIS(nums2);
     EXPECT_EQ(result2, expectResult2);
+
+    vector<int> nums3 = {10, 9, 2, 5, 3, 7, 101, 18};
+    int expectResult3 = 4;
+    int result3 = solution.lengthOfLIS(nums3);
+    EXPECT_EQ(result3, expectResult3);
 }
 
 TEST(dpTest, p322)

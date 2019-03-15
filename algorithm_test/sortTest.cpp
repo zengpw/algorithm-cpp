@@ -106,4 +106,3 @@ TEST(sortTest, heapSort)
 
     free(array);
 }
-
