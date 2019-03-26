@@ -23,9 +23,6 @@ void insertionSort(int array[], int low, int high)
         // 从后往前比较
         for (int j = k - 1; j >= low; j--)
         {
-            // 交换是不可避免的，下面2种都可以
-            // * 找到位置后，把所有元素后移
-            // * 没找到合适位置，往前移动一次
             if (array[k] < array[j])
             {
                 swapIntArrayElement(array, k--, j);

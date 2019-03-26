@@ -8,18 +8,17 @@
 ## Environment Suggestion
 #### Win
 > You can also using any other GNU compilers + [CMake](https://cmake.org/)
-* [MinGW](https://nuwen.net/mingw.html)
-* [CLion](https://www.jetbrains.com/clion)
+* [MinGW](https://nuwen.net/mingw.html) + [CLion](https://www.jetbrains.com/clion)
 #### Mac
-* [CMake](https://cmake.org/) or [XCode](https://developer.apple.com/xcode/)
+* [CMake](https://cmake.org/)
+* [Xcode](https://developer.apple.com/xcode/)
 #### Linux
 * [CMake](https://cmake.org/)
 
-## Compile & Test
+## Compilation & Test
 #### Mac(Command Line)
-* Execute ./build_macOS.sh
+* Execute ./build_linux_macOS.sh
 * Execute ./build/algorithm-cpp
 #### Linux(Command Line)
-* Execute ./build_macOS.sh
+* Execute ./build_linux_macOS.sh
 * Execute ./build/algorithm-cpp
-

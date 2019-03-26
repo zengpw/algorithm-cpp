@@ -15,5 +15,5 @@ matrix:
             - cmake
 
 script:
-  - ./build_macOS.sh
+  - ./build_linux_macOS.sh
   - ./build/algorithm-cpp

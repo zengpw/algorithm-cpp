@@ -51,4 +51,3 @@ void shellSort(int array[], int low, int high)
 }
 
 #endif // sort_shellSort_h
-

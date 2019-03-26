@@ -9,13 +9,38 @@
 #include "gtest/gtest.h"
 
 #include "algorithm/basic/binarySearch.h"
+#include "algorithm/basic/recurrence.h"
+#include "algorithm/basic/recursion.h"
 #include "algorithm/basic/ternarySearch.h"
 
-#define count 15
+// test data for recursion, recurrence, iteration
+const int fibonacci[30] = {0, 1, 1, 2, 3, 5, 8, 13, 21, 34,
+                           55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181,
+                           6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229};
 
+// test data for array search
+#define count 15
 const int sortedArray[count] = {0, 0, 1, 1, 2, 3, 4, 5, 6, 7, 7, 7, 7, 7, 9};
 const int upTernaryArray[count] = {-5, 0, 1, 1, 2, 3, 9, 6, 5, 4, 3, 2, 1, 0, -5};
 const int downTernaryArray[count] = {9, 8, 7, 6, 5, 4, 3, -50, -25, -3, 7, 15, 66, 77, 95};
+
+TEST(basicTest, fibonacciRS)
+{
+    int result1 = fibonacciRS(15);
+    EXPECT_EQ(result1, 610);
+
+    int result2 = fibonacciRS(25);
+    EXPECT_EQ(result2, 75025);
+}
+
+TEST(basicTest, fibonacciRR)
+{
+    int result1 = fibonacciRR(15);
+    EXPECT_EQ(result1, 610);
+
+    int result2 = fibonacciRR(25);
+    EXPECT_EQ(result2, 75025);
+}
 
 TEST(basicTest, binarySearch)
 {

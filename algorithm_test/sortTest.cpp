@@ -43,21 +43,21 @@ TEST(sortTest, bubbleSort)
     free(array);
 }
 
-TEST(sortTest, insertionSort)
-{
-    int* array = createTestArray();
-    
-    insertionSort(array, 0, count - 1);
-    EXPECT_STREQ(intArray2String(array, count).c_str(), intArray2String(sortedArray, count).c_str());
-    
-    free(array);
-}
-
 TEST(sortTest, selectionSort)
 {
     int* array = createTestArray();
     
     selectionSort(array, 0, count - 1);
+    EXPECT_STREQ(intArray2String(array, count).c_str(), intArray2String(sortedArray, count).c_str());
+    
+    free(array);
+}
+
+TEST(sortTest, insertionSort)
+{
+    int* array = createTestArray();
+    
+    insertionSort(array, 0, count - 1);
     EXPECT_STREQ(intArray2String(array, count).c_str(), intArray2String(sortedArray, count).c_str());
     
     free(array);

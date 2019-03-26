@@ -16,6 +16,7 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <vector>
 
 static void swapIntArrayElement(int *array, int i, int j)
 {
@@ -46,6 +47,17 @@ static std::string intArray2String(const int *array, int arraySize)
     }
     
     return arrayString;
+}
+
+static bool existsInArray(const int *array, int arraySize, int value)
+{
+    for (int i = 0; i < arraySize; ++i)
+    {
+        if (array[i] == value)
+            return true;
+    }
+
+    return false;
 }
 
 static void printIntArray(const int *array, int arraySize)
