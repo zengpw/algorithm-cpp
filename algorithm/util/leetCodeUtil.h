@@ -10,10 +10,12 @@
 #define util_leetCodeUtil_h
 
 #include <algorithm>
+#include <climits>
 #include <iostream>
 #include <queue>
 #include <sstream>
 #include <string>
+#include <unordered_set>
 #include <vector>
 
 class stlUtil
