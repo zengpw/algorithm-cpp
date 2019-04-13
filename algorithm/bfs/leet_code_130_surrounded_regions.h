@@ -19,7 +19,7 @@ using namespace std;
 //
 class Solution130
 {
-public:
+private:
     queue<pair<int, int>> nQueue;           // 存放标记为 'N' 的成员
 public:
     void solve(vector<vector<char>>& board)

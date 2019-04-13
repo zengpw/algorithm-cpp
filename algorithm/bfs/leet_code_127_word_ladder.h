@@ -19,7 +19,7 @@ using namespace std;
 //
 class Solution127
 {
-public:
+private:
     queue<pair<string, int>> nQueue;           // pair<单词, 该单词到 A 的距离>
 public:
     int ladderLength(string beginWord, string endWord, vector<string>& wordList)

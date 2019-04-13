@@ -13,7 +13,9 @@
 #include <climits>
 #include <iostream>
 #include <map>
+#include <numeric>
 #include <queue>
+#include <stack>
 #include <sstream>
 #include <string>
 #include <unordered_map>
@@ -62,11 +64,55 @@ public:
     }
 
     template <typename T>
+    static std::string vector2String(std::vector<T>& v)
+    {
+        std::stringstream ss;
+        std::string resultString;
+
+        for (int i = 0; i < v.size(); ++i)
+        {
+            ss << v[i];
+            resultString += ss.str();
+
+            if (i < v.size() - 1)
+            {
+                resultString += " ";
+            }
+
+            // clear buffer
+            ss.str("");
+            ss.clear();
+        }
+
+        return resultString;
+    }
+
+    template <typename T>
     void clearQueue(std::queue<T>& q) {
         std::queue<T> empty;
         swap(empty, q);
     }
 };
+
+namespace treeUtil
+{
+    /**
+     * Definition for a binary tree node.
+     * struct TreeNode {
+     *     int val;
+     *     TreeNode *left;
+     *     TreeNode *right;
+     *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+     * };
+     */
+
+    struct TreeNode {
+        int val;
+        TreeNode *left;
+        TreeNode *right;
+        TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+    };
+}
 
 #endif // util_leetCodeUtil_h
 

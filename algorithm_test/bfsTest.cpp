@@ -3,7 +3,7 @@
 //  algorithm-cpp
 //
 //  Created by Vincent Zeng on 2019/3/1.
-//  Copyright © 2018 Vincent Zeng. All rights reserved.
+//  Copyright © 2019 Vincent Zeng. All rights reserved.
 //
 
 #include "gtest/gtest.h"
