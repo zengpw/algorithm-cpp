@@ -17,3 +17,6 @@ matrix:
 script:
   - ./build_linux_macOS.sh
   - ./build/algorithm-cpp
+
+notifications:
+  slack: vincentselfworkspace:RwkrpoJGclmeDDvddB5Hxz01
