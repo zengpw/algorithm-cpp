@@ -6,8 +6,8 @@
 //  Copyright © 2019 Vincent Zeng. All rights reserved.
 //
 
-#ifndef lc_basic_leet_code_15_three_sum_h
-#define lc_basic_leet_code_15_three_sum_h
+#ifndef basic_leet_code_15_three_sum_h
+#define basic_leet_code_15_three_sum_h
 
 #include "util/leetCodeUtil.h"
 
@@ -72,4 +72,4 @@ public:
     }
 };
 
-#endif // lc_basic_leet_code_15_three_sum_h
+#endif // basic_leet_code_15_three_sum_h

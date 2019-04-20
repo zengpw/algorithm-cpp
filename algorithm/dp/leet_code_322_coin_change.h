@@ -22,8 +22,8 @@ class Solution322
 public:
     int coinChange(vector<int>& coins, int amount)
 	{
-        // 记录问题的规模 dp[n], 其中 n = 需要找零的金额, dp[n] = 该金额对应的最优解，初始值为最大 amount + 1
-        // 第 2 个 amount + 1 用于是否存在最优解判断
+        // 记录问题的规模 dp[n], 其中 n = 需要找零的金额, dp[n] = 该金额对应的最优解
+        // dp[n] 初始值 amount + 1, 用于是否存在最优解判断，小于此值即存在更好的解法
         vector<int> dp(amount + 1, amount + 1);
         dp[0] = 0;
 
@@ -33,13 +33,13 @@ public:
         // 规模从小到大，在当前规模下，寻找最优解
         for (int n = 1; n < dp.size(); ++n)
         {
-            // 当前规模的最优解 = 某一已知规模的最优解 + (0-n)个硬币
             for (int i = 0; i < coins.size(); ++i)
             {
-                // 选一个不大于当前规模的硬币，计算它的最优解
+                // 对所有满足条件的硬币都进行计算，满足条件的硬币 -> 不大于规模 n 即可
                 if (n >= coins[i])
                 {
-                    // dp[n - coins[i]] + 1 = 某一已知规模的最优解 + 这枚硬币
+                    // 当前规模的最优解 = 某一已知规模的最优解 + 1个特殊面值的硬币
+                    // 找到最小解法
                     dp[n] = min(dp[n - coins[i]] + 1, dp[n]);
                 }
             }

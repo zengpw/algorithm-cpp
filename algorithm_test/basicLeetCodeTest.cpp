@@ -1,5 +1,5 @@
 //
-//  lcBasicTest.cpp
+//  basicLeetCodeTest.cpp
 //  algorithm-cpp
 //
 //  Created by Vincent Zeng on 2019/4/10.
@@ -8,10 +8,10 @@
 
 #include "gtest/gtest.h"
 
-#include "algorithm/lc_basic/leet_code_1_two_sum.h"
-#include "algorithm/lc_basic/leet_code_15_three_sum.h"
+#include "algorithm/basic_leet_code/leet_code_1_two_sum.h"
+#include "algorithm/basic_leet_code/leet_code_15_three_sum.h"
 
-TEST(lcBasicTest, p1)
+TEST(basicLeetCodeTest, p1)
 {
     Solution1 solution;
 
@@ -31,7 +31,7 @@ TEST(lcBasicTest, p1)
     EXPECT_EQ(result3[0] + result3[1], 3);      // [1] + [2]
 }
 
-TEST(lcBasicTest, p15)
+TEST(basicLeetCodeTest, p15)
 {
     Solution15 solution;
 

@@ -9,6 +9,7 @@
 #ifndef util_intUtil_h
 #define util_intUtil_h
 
+#include <memory.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>

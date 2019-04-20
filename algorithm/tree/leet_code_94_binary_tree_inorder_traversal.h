@@ -29,7 +29,7 @@ public:
         vector<int> result;
 
         // clear
-        std::stack<pair<TreeNode *, int>> empty;
+        std::stack<pair<TreeNode*, int>> empty;
         swap(empty, nQueue);
 
         if (root != nullptr)

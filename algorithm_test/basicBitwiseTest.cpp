@@ -1,5 +1,5 @@
 //
-//  bitwiseTest.cpp
+//  basicBitwiseTest.cpp
 //  algorithm-cpp
 //
 //  Created by Vincent Zeng on 2019/3/22.
@@ -18,7 +18,7 @@ const int twoNumberAppearsOnceArrayResult[2] = {2, 6};
 
 int twoNumberAppearsOnce2Array[13] = {3, 5, 9, 0, 1, 3, 5, 9, 0, 0, 5, 3, 9};
 
-TEST(bitwiseTest, findNumberAppearsOnce)
+TEST(basicBitwiseTest, findNumberAppearsOnce)
 {
     auto result1 = findNumberAppearsOnce(twoNumberAppearsOnceArray, 16);
     EXPECT_EQ(result1.size(), 2);
@@ -29,7 +29,7 @@ TEST(bitwiseTest, findNumberAppearsOnce)
     }
 }
 
-TEST(bitwiseTest, findNumberAppearsOnce2)
+TEST(basicBitwiseTest, findNumberAppearsOnce2)
 {
     int result1 = findNumberAppearsOnce2(twoNumberAppearsOnce2Array, 13);
     EXPECT_EQ(result1, 1);

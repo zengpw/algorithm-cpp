@@ -10,9 +10,24 @@
 
 #include "algorithm/util/leetCodeUtil.h"
 
+#include "algorithm/dp/leet_code_5_longest_palindromic_substring.h"
 #include "algorithm/dp/leet_code_279_perfect_squares.h"
 #include "algorithm/dp/leet_code_300_longest_increasing_subsequence.h"
 #include "algorithm/dp/leet_code_322_coin_change.h"
+
+TEST(dpTest, p5)
+{
+    Solution5 solution;
+
+    string str1("babad");
+    EXPECT_STREQ(solution.longestPalindrome(str1).c_str(), "bab");
+
+    string str2("cbbd");
+    EXPECT_STREQ(solution.longestPalindrome(str2).c_str(), "bb");
+
+    string str3("abcda");
+    EXPECT_STREQ(solution.longestPalindrome(str3).c_str(), "a");
+}
 
 TEST(dpTest, p279)
 {
