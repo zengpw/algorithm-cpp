@@ -21,11 +21,11 @@ using TreeNode = treeUtil::TreeNode;
 class Solution94
 {
 private:
-    stack<pair<TreeNode*, int>> nQueue;             // int = 0 不需要处理左子树, = 1 需要处理左子树
+    stack<pair<TreeNode*, int>> nQueue;             // int = 1 需要先处理左子树, = 0 不需要
 public:
     vector<int> inorderTraversal(TreeNode* root)
     {
-        // 中序遍历，是指根的顺序在中间，顺序是 左结点 - 分支结点（包含根结点） - 右结点
+        // 中序遍历，是指根的顺序在中间，顺序是 左子结点 - 分支结点（包含根结点） - 右子结点
         vector<int> result;
 
         // clear
@@ -58,7 +58,7 @@ public:
                 // 当前未处理最左结点
                 result.push_back(t->val);
 
-                // 处理它的右结点
+                // 处理它的右子结点
                 if (t->right != nullptr)
                     nQueue.push(make_pair(t->right, 1));
             }

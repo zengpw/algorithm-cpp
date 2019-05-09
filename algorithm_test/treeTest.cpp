@@ -13,6 +13,7 @@
 #include "algorithm/tree/leet_code_94_binary_tree_inorder_traversal.h"
 #include "algorithm/tree/leet_code_102_binary_tree_level_order_traversal.h"
 #include "algorithm/tree/leet_code_113_path_sum_2.h"
+#include "algorithm/tree/leet_code_144_binary_tree_preorder_traversal.h"
 
 // 创建完全二叉树
 // 形参（指针）不可变，所以需要传（指针的）引用
@@ -69,4 +70,17 @@ TEST(treeTest, p113)
     vector<vector<int>> result = solution.pathSum(root, 22);
     EXPECT_EQ(result.size(), 2);
     EXPECT_STREQ(stlUtil::vectorVector2String<int>(result).c_str(), "5 4 11 2; 5 8 4 5");
+}
+
+TEST(treeTest, p144)
+{
+    Solution144 solution;
+
+    TreeNode* root;
+    vector<int> array = {1, INT_MAX, 2, INT_MAX, INT_MAX, 3};
+
+    createCompleteBinaryTreeFromArray(root, array);
+    vector<int> result = solution.preorderTraversal(root);
+    EXPECT_EQ(result.size(), 3);
+    EXPECT_STREQ(stlUtil::vector2String<int>(result).c_str(), "1 2 3");
 }

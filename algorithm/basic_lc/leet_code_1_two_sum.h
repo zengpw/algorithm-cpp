@@ -15,7 +15,7 @@ using namespace std;
 
 //
 //  https://leetcode.com/problems/two-sum/
-//  题意： 已知存在 a + b = c, 根据 c 和 a, b 的超集求 a, b 的下标
+//  题意： 已知存在 a + b = c, 根据 c 和包含 a, b 的数组求 a, b 在数组中的下标
 //
 class Solution1
 {

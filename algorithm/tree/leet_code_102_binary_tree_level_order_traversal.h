@@ -39,7 +39,7 @@ public:
 
         while (!nQueue.empty())
         {
-            // 每个内部循环处理队列的所有数据，实现按层处理
+            // 一次性处理同一层的所有数据，实现按层处理
             int size = nQueue.size();
             vector<int> values;
 

@@ -8,8 +8,8 @@
 
 #include "gtest/gtest.h"
 
-#include "algorithm/basic_leet_code/leet_code_1_two_sum.h"
-#include "algorithm/basic_leet_code/leet_code_15_three_sum.h"
+#include "algorithm/basic_lc/leet_code_1_two_sum.h"
+#include "algorithm/basic_lc/leet_code_15_three_sum.h"
 
 TEST(basicLeetCodeTest, p1)
 {

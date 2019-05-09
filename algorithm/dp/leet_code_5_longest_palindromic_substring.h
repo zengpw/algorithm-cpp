@@ -35,7 +35,7 @@ public:
         // = 0 不是回文
         // = 1 长度为 1 的回文
         // 长度为 j - i + 1 的回文
-        memset(dp, 0, sizeof(int)*s.length()*s.length());
+        memset(dp, 0, sizeof(dp));
 
         // pair<最大回文子串首地址，该子串长度>
         auto result = make_pair(0, 1);
