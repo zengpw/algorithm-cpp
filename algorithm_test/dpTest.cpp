@@ -12,9 +12,12 @@
 
 #include "algorithm/dp/leet_code_5_longest_palindromic_substring.h"
 #include "algorithm/dp/leet_code_14_longest_common_prefix.h"
+#include "algorithm/dp/leet_code_53_maximum_subarray.h"
+#include "algorithm/dp/leet_code_120_triangle.h"
 #include "algorithm/dp/leet_code_279_perfect_squares.h"
 #include "algorithm/dp/leet_code_300_longest_increasing_subsequence.h"
 #include "algorithm/dp/leet_code_322_coin_change.h"
+#include "algorithm/dp/leet_code_416_partition_equal_subset_sum.h"
 #include "algorithm/dp/leet_code_718_maximum_length_of_repeated_subarray.h"
 #include "algorithm/dp/leet_code_887_super_egg_drop.h"
 
@@ -43,6 +46,32 @@ TEST(dpTest, p14)
     vector<string> strs2 = {"dog", "racecar", "car"};
     string result2 = solution.longestCommonPrefix(strs2);
     EXPECT_STREQ(result2.c_str(), "");
+}
+
+TEST(dpTest, p53)
+{
+    Solution53 solution;
+
+    vector<int> input1 = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+    int result1 = solution.maxSubArray(input1);
+    EXPECT_EQ(result1, 6);
+
+    vector<int> input2 = {1};
+    int result2 = solution.maxSubArray(input2);
+    EXPECT_EQ(result2, 1);
+}
+
+TEST(dpTest, p120)
+{
+    Solution120 solution;
+
+    vector<vector<int>> triangle1 = {{2},
+                                     {3, 4},
+                                     {6, 5, 7},
+                                     {4, 1, 8, 3}};
+
+    int result1 = solution.minimumTotal(triangle1);
+    EXPECT_EQ(result1, 11);
 }
 
 TEST(dpTest, p279)
@@ -101,6 +130,23 @@ TEST(dpTest, p322)
     int expectResult3 = 20;
     int result3 = solution.coinChange(coins3, amount3);
     EXPECT_EQ(result3, expectResult3);
+}
+
+TEST(dpTest, p416)
+{
+    Solution416 solution;
+
+    vector<int> input1 = {1, 5, 11, 5};
+    bool result1 = solution.canPartition(input1);
+    EXPECT_TRUE(result1);
+
+    vector<int> input2 = {1, 2, 3, 5};
+    bool result2 = solution.canPartition(input2);
+    EXPECT_FALSE(result2);
+
+    vector<int> input3 = {1, 2, 5};
+    bool result3 = solution.canPartition(input3);
+    EXPECT_FALSE(result3);
 }
 
 TEST(dpTest, p718)
