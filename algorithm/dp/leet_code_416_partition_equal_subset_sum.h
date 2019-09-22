@@ -9,8 +9,8 @@
 #ifndef dp_leet_code_416_partition_equal_subset_sum_h
 #define dp_leet_code_416_partition_equal_subset_sum_h
 
-#include "util/intUtil.h"
-#include "util/leetCodeUtil.h"
+#include "util/int_util.h"
+#include "util/leet_code_util.h"
 
 using namespace std;
 

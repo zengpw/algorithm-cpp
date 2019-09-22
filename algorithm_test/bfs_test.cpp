@@ -1,5 +1,5 @@
 //
-//  bfsTest.cpp
+//  bfs_test.cpp
 //  algorithm-cpp
 //
 //  Created by Vincent Zeng on 2019/3/1.
@@ -8,7 +8,7 @@
 
 #include "gtest/gtest.h"
 
-#include "algorithm/util/leetCodeUtil.h"
+#include "algorithm/util/leet_code_util.h"
 
 #include "algorithm/bfs/leet_code_127_word_ladder.h"
 #include "algorithm/bfs/leet_code_130_surrounded_regions.h"

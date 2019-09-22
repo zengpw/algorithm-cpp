@@ -1,15 +1,15 @@
 //
-//  selectionSort.h
+//  selection_sort.h
 //  algorithm-cpp
 //
 //  Created by Vincent Zeng on 2018/4/26.
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
-#ifndef sort_selectionSort_h
-#define sort_selectionSort_h
+#ifndef sort_selection_sort_h
+#define sort_selection_sort_h
 
-#include "util/intUtil.h"
+#include "util/int_util.h"
 
 void selectionSort(int array[], int low, int high)
 {
@@ -28,10 +28,9 @@ void selectionSort(int array[], int low, int high)
         if (k != i)
         {
             swapIntArrayElement(array, i, k);
-            printIntArray(array, arraySize);
+//            printIntArray(array, arraySize);
         }
     }
 }
 
-#endif // sort_selectionSort_h
-
+#endif // sort_selection_sort_h

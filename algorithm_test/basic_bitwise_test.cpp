@@ -1,5 +1,5 @@
 //
-//  basicBitwiseTest.cpp
+//  basic_bitwise_test.cpp
 //  algorithm-cpp
 //
 //  Created by Vincent Zeng on 2019/3/22.
@@ -8,7 +8,7 @@
 
 #include "gtest/gtest.h"
 
-#include "util/intUtil.h"
+#include "util/int_util.h"
 
 #include "algorithm/basic/bitwise.h"
 

@@ -9,7 +9,7 @@
 #ifndef tree_leet_code_102_binary_tree_level_order_traversal_h
 #define tree_leet_code_102_binary_tree_level_order_traversal_h
 
-#include "util/leetCodeUtil.h"
+#include "util/leet_code_util.h"
 
 using namespace std;
 using TreeNode = treeUtil::TreeNode;

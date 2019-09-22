@@ -9,7 +9,7 @@
 #ifndef basic_bitwise_h
 #define basic_bitwise_h
 
-#include "util/intUtil.h"
+#include "util/int_util.h"
 
 using namespace std;
 

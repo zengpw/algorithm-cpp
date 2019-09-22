@@ -1,15 +1,15 @@
 //
-//  bubbleSort.h
+//  bubble_sort.h
 //  algorithm-cpp
 //
 //  Created by Vincent Zeng on 2018/4/4.
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
-#ifndef sort_bubbleSort_h
-#define sort_bubbleSort_h
+#ifndef sort_bubble_sort_h
+#define sort_bubble_sort_h
 
-#include "util/intUtil.h"
+#include "util/int_util.h"
 
 void bubbleSort(int array[], int low, int high)
 {
@@ -24,11 +24,10 @@ void bubbleSort(int array[], int low, int high)
             if (array[j] > array[j + 1])
             {
                 swapIntArrayElement(array, j, j + 1);
-                printIntArray(array, arraySize);
+//                printIntArray(array, arraySize);
             }
         }
     }
 }
 
-#endif // sort_bubbleSort_h
-
+#endif // sort_bubble_sort_h

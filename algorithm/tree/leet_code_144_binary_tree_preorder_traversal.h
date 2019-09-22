@@ -9,7 +9,7 @@
 #ifndef tree_leet_code_144_binary_tree_preorder_traversal_h
 #define tree_leet_code_144_binary_tree_preorder_traversal_h
 
-#include "util/leetCodeUtil.h"
+#include "util/leet_code_util.h"
 
 using namespace std;
 using TreeNode = treeUtil::TreeNode;

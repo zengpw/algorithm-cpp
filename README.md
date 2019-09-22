@@ -1,24 +1,30 @@
 # algorithm-cpp
 [![Build Status](https://www.travis-ci.org/zengpw/algorithm-cpp.svg?branch=master)](https://www.travis-ci.org/zengpw/algorithm-cpp)
-> 用于练习算法和数据结构
+> 练习算法和数据结构
 
 ## Dependencies
 * [gtest 1.8.0](https://github.com/google/googletest/tree/release-1.8.0)
 
-## Environment Suggestion
+## Development Environment
 #### Win
+* [MinGW](https://nuwen.net/mingw.html) + [CLion](https://www.jetbrains.com/clion) (Recommend)
 > You can also using any other GNU compilers + [CMake](https://cmake.org/)
-* [MinGW](https://nuwen.net/mingw.html) + [CLion](https://www.jetbrains.com/clion)
 #### Mac
 * [CMake](https://cmake.org/)
 * [Xcode](https://developer.apple.com/xcode/)
+* [CLion](https://www.jetbrains.com/clion)
 #### Linux
 * [CMake](https://cmake.org/)
+* [CLion](https://www.jetbrains.com/clion)
 
-## Compilation & Test
-#### Mac(Command Line)
-* Execute ./build_linux_macOS.sh
-* Execute ./build/algorithm-cpp
-#### Linux(Command Line)
-* Execute ./build_linux_macOS.sh
-* Execute ./build/algorithm-cpp
+## Run & Test
+#### Mac
+```
+./build_linux_macOS.sh
+./build/algorithm-cpp
+```
+#### Linux
+```
+./build_linux_macOS.sh
+./build/algorithm-cpp
+```

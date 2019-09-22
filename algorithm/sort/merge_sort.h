@@ -1,15 +1,15 @@
 //
-//  mergeSort.h
+//  merge_sort.h
 //  algorithm-cpp
 //
 //  Created by Vincent Zeng on 2018/4/28.
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
-#ifndef sort_mergeSort_h
-#define sort_mergeSort_h
+#ifndef sort_merge_sort_h
+#define sort_merge_sort_h
 
-#include "util/intUtil.h"
+#include "util/int_util.h"
 
 void mMerge(int array[], int unsortedArray[], int low, int mid, int high)
 {
@@ -75,5 +75,4 @@ void mergeSort(int array[], int arraySize)
     mSort(array, unsortedArray, 0, arraySize - 1);
 }
 
-#endif // sort_mergeSort_h
-
+#endif // sort_merge_sort_h

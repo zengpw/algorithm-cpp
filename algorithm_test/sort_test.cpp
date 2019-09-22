@@ -1,5 +1,5 @@
 //
-//  sortTest.cpp
+//  sort_test.cpp
 //  algorithm-cpp
 //
 //  Created by Vincent Zeng on 2018/4/4.
@@ -8,13 +8,13 @@
 
 #include "gtest/gtest.h"
 
-#include "algorithm/sort/bubbleSort.h"
-#include "algorithm/sort/heapSort.h"
-#include "algorithm/sort/insertionSort.h"
-#include "algorithm/sort/mergeSort.h"
-#include "algorithm/sort/quickSort.h"
-#include "algorithm/sort/selectionSort.h"
-#include "algorithm/sort/shellSort.h"
+#include "algorithm/sort/bubble_sort.h"
+#include "algorithm/sort/heap_sort.h"
+#include "algorithm/sort/insertion_sort.h"
+#include "algorithm/sort/merge_sort.h"
+#include "algorithm/sort/quick_sort.h"
+#include "algorithm/sort/selection_sort.h"
+#include "algorithm/sort/shell_sort.h"
 
 #define count 15
 #define arraySize sizeof(int)*count

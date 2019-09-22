@@ -9,7 +9,7 @@
 #ifndef dp_leet_code_322_coin_change_h
 #define dp_leet_code_322_coin_change_h
 
-#include "util/leetCodeUtil.h"
+#include "util/leet_code_util.h"
 
 using namespace std;
 

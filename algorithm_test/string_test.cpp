@@ -1,5 +1,5 @@
 //
-//  stringTest.cpp
+//  string_test.cpp
 //  algorithm-cpp
 //
 //  Created by Vincent Zeng on 2019/5/13.
@@ -8,7 +8,7 @@
 
 #include "gtest/gtest.h"
 
-#include "algorithm/util/leetCodeUtil.h"
+#include "algorithm/util/leet_code_util.h"
 
 #include "algorithm/string/leet_code_28_implement_strstr.h"
 #include "algorithm/string/leet_code_72_edit_distance.h"

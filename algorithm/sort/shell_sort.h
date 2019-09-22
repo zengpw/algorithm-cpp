@@ -1,15 +1,15 @@
 //
-//  shellSort.h
+//  shell_sort.h
 //  algorithm-cpp
 //
 //  Created by Vincent Zeng on 2018/4/26.
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
-#ifndef sort_shellSort_h
-#define sort_shellSort_h
+#ifndef sort_shell_sort_h
+#define sort_shell_sort_h
 
-#include "util/intUtil.h"
+#include "util/int_util.h"
 
 void shellSort(int array[], int low, int high)
 {
@@ -35,7 +35,7 @@ void shellSort(int array[], int low, int high)
                 if (array[k] < array[j])
                 {
                     swapIntArrayElement(array, k, j);
-                    printIntArray(array, arraySize);
+//                    printIntArray(array, arraySize);
                     
                     k -= s;
                 }
@@ -50,4 +50,4 @@ void shellSort(int array[], int low, int high)
     }
 }
 
-#endif // sort_shellSort_h
+#endif // sort_shell_sort_h

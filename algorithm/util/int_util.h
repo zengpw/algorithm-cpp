@@ -1,13 +1,13 @@
 //
-//  intUtil.h
+//  int_util.h
 //  algorithm-cpp
 //
 //  Created by Vincent Zeng on 2018/4/4.
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
-#ifndef util_intUtil_h
-#define util_intUtil_h
+#ifndef util_int_util_h
+#define util_int_util_h
 
 #include <memory.h>
 #include <stdlib.h>
@@ -71,5 +71,5 @@ static void printELement(const int *array, const int element)
     std::cout << "key = " << element << ", value = " << *(array + element) << std::endl;
 }
 
-#endif // util_intUtil_h
+#endif // util_int_util_h
 

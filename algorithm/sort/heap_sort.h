@@ -1,15 +1,15 @@
 //
-//  heapSort.h
+//  heap_sort.h
 //  algorithm-cpp
 //
 //  Created by Vincent Zeng on 2018/4/28.
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
-#ifndef sort_heapSort_h
-#define sort_heapSort_h
+#ifndef sort_heap_sort_h
+#define sort_heap_sort_h
 
-#include "util/intUtil.h"
+#include "util/int_util.h"
 
 void minHeapSort(int array[], int n)
 {
@@ -61,12 +61,12 @@ void minHeapSort(int array[], int n)
         }
     }
 
-    printIntArray(array, n);
+//    printIntArray(array, n);
 }
 
 void heapSort(int array[], int length)
 {
-    printIntArray(array, length);
+//    printIntArray(array, length);
 
     // i 代表无序区的长度
     for (int i = length; i > 1; i--)
@@ -76,8 +76,8 @@ void heapSort(int array[], int length)
         // 将堆顶元素出队
         swapIntArrayElement(array, 0, i - 1);
 
-        printIntArray(array, length);
+//        printIntArray(array, length);
     }
 }
 
-#endif // sort_heapSort_h
+#endif // sort_heap_sort_h

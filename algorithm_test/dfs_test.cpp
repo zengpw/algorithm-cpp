@@ -1,5 +1,5 @@
 //
-//  dfsTest.cpp
+//  dfs_test.cpp
 //  algorithm-cpp
 //
 //  Created by Vincent Zeng on 2019/4/19.
@@ -8,7 +8,7 @@
 
 #include "gtest/gtest.h"
 
-#include "algorithm/util/leetCodeUtil.h"
+#include "algorithm/util/leet_code_util.h"
 
 #include "algorithm/dfs/leet_code_207_course_schedule.h"
 

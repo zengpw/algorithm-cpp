@@ -9,7 +9,7 @@
 #ifndef bfs_leet_code_130_surrounded_regions_h
 #define bfs_leet_code_130_surrounded_regions_h
 
-#include "util/leetCodeUtil.h"
+#include "util/leet_code_util.h"
 
 using namespace std;
 

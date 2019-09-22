@@ -1,13 +1,13 @@
 //
-//  leetCodeUtil.h
+//  leet_code_util.h
 //  algorithm-cpp
 //
 //  Created by Vincent Zeng on 2019/2/28.
 //  Copyright © 2019 Vincent Zeng. All rights reserved.
 //
 
-#ifndef util_leetCodeUtil_h
-#define util_leetCodeUtil_h
+#ifndef util_leet_code_util_h
+#define util_leet_code_util_h
 
 #include <algorithm>
 #include <climits>
@@ -114,5 +114,4 @@ namespace treeUtil
     };
 }
 
-#endif // util_leetCodeUtil_h
-
+#endif // util_leet_code_util_h

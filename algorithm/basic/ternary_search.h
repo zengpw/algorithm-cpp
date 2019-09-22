@@ -1,15 +1,15 @@
 //
-//  ternarySearch.h
+//  ternary_search.h
 //  algorithm-cpp
 //
 //  Created by Vincent Zeng on 2018/10/17.
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
-#ifndef basic_ternarySearch_h
-#define basic_ternarySearch_h
+#ifndef basic_ternary_search_h
+#define basic_ternary_search_h
 
-#include "util/intUtil.h"
+#include "util/int_util.h"
 
 /**
  *
@@ -50,4 +50,4 @@ int ternarySearch(const int array[], const int low, const int high, int directio
     }
 }
 
-#endif // basic_ternarySearch_h
+#endif // basic_ternary_search_h

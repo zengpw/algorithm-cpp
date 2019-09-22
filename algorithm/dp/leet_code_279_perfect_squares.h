@@ -9,7 +9,7 @@
 #ifndef dp_leet_code_279_perfect_squares_h
 #define dp_leet_code_279_perfect_squares_h
 
-#include "util/leetCodeUtil.h"
+#include "util/leet_code_util.h"
 
 using namespace std;
 

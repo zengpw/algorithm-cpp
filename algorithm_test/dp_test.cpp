@@ -1,5 +1,5 @@
 //
-//  dpTest.cpp
+//  dp_test.cpp
 //  algorithm-cpp
 //
 //  Created by Vincent Zeng on 2019/3/4.
@@ -8,7 +8,7 @@
 
 #include "gtest/gtest.h"
 
-#include "algorithm/util/leetCodeUtil.h"
+#include "algorithm/util/leet_code_util.h"
 
 #include "algorithm/dp/leet_code_5_longest_palindromic_substring.h"
 #include "algorithm/dp/leet_code_14_longest_common_prefix.h"

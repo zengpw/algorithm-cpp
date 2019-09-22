@@ -9,7 +9,7 @@
 #ifndef dp_leet_code_300_longest_increasing_subsequence_h
 #define dp_leet_code_300_longest_increasing_subsequence_h
 
-#include "util/leetCodeUtil.h"
+#include "util/leet_code_util.h"
 
 using namespace std;
 

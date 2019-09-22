@@ -9,8 +9,8 @@
 #ifndef dp_leet_code_53_maximum_subarray_h
 #define dp_leet_code_53_maximum_subarray_h
 
-#include "util/intUtil.h"
-#include "util/leetCodeUtil.h"
+#include "util/int_util.h"
+#include "util/leet_code_util.h"
 
 using namespace std;
 

@@ -9,7 +9,7 @@
 #ifndef basic_recursion_h
 #define basic_recursion_h
 
-#include "util/intUtil.h"
+#include "util/int_util.h"
 
 // Fibonacci sequence
 int fibonacciRS(int n)

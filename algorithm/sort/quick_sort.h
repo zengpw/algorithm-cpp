@@ -1,15 +1,15 @@
 //
-//  quickSort.h
+//  quick_sort.h
 //  algorithm-cpp
 //
 //  Created by Vincent Zeng on 2018/4/28.
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
-#ifndef sort_quickSort_h
-#define sort_quickSort_h
+#ifndef sort_quick_sort_h
+#define sort_quick_sort_h
 
-#include "util/intUtil.h"
+#include "util/int_util.h"
 
 // 快速排序（2分区法）
 void quickSort(int array[], int low, int high)
@@ -53,4 +53,4 @@ void quickSort(int array[], int low, int high)
     quickSort(array, i, high);
 }
 
-#endif // sort_quickSort_h
+#endif // sort_quick_sort_h

@@ -1,5 +1,5 @@
 //
-//  treeTest.cpp
+//  tree_test.cpp
 //  algorithm-cpp
 //
 //  Created by Vincent Zeng on 2019/4/12.
@@ -8,7 +8,7 @@
 
 #include "gtest/gtest.h"
 
-#include "algorithm/util/leetCodeUtil.h"
+#include "algorithm/util/leet_code_util.h"
 
 #include "algorithm/tree/leet_code_94_binary_tree_inorder_traversal.h"
 #include "algorithm/tree/leet_code_102_binary_tree_level_order_traversal.h"

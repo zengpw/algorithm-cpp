@@ -9,7 +9,7 @@
 #ifndef basic_recurrence_h
 #define basic_recurrence_h
 
-#include "util/intUtil.h"
+#include "util/int_util.h"
 
 // Fibonacci sequence
 int fibonacciRR(int n)

@@ -9,7 +9,7 @@
 #ifndef tree_leet_code_113_path_sum_2_h
 #define tree_leet_code_113_path_sum_2_h
 
-#include "util/leetCodeUtil.h"
+#include "util/leet_code_util.h"
 
 using namespace std;
 using TreeNode = treeUtil::TreeNode;

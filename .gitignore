@@ -1,5 +1,8 @@
-# mac os
-.DS_Store
+
+# clion
+.idea
+bin
+cmake-build-debug
 
 # xcode
 xcuserdata
@@ -23,12 +26,6 @@ Makefile
 *.lib
 *.dll
 
-# clion
-.idea
-bin
-cmake-build-debug
-
-# vscode
+# misc
+.DS_Store
 .vscode
-
-

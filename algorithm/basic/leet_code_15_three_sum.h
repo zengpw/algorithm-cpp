@@ -9,7 +9,7 @@
 #ifndef basic_leet_code_15_three_sum_h
 #define basic_leet_code_15_three_sum_h
 
-#include "util/leetCodeUtil.h"
+#include "util/leet_code_util.h"
 
 using namespace std;
 

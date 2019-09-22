@@ -1,15 +1,15 @@
 //
-//  binarySearch.h
+//  binary_search.h
 //  algorithm-cpp
 //
 //  Created by Vincent Zeng on 2018/9/6.
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
-#ifndef basic_binarySearch_h
-#define basic_binarySearch_h
+#ifndef basic_binary_search_h
+#define basic_binary_search_h
 
-#include "util/intUtil.h"
+#include "util/int_util.h"
 
 int binarySearch(const int array[], const int low, const int high, const int element)
 {
@@ -40,4 +40,4 @@ int binarySearch(const int array[], const int low, const int high, const int ele
     return m;
 }
 
-#endif // basic_binarySearch_h
+#endif // basic_binary_search_h
