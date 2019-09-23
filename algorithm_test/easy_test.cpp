@@ -1,5 +1,5 @@
 //
-//  basicTest.cpp
+//  easy_test.cpp
 //  algorithm-cpp
 //
 //  Created by Vincent Zeng on 2018/11/20.
@@ -8,25 +8,41 @@
 
 #include "gtest/gtest.h"
 
-#include "algorithm/basic/binary_search.h"
-#include "algorithm/basic/leet_code_1_two_sum.h"
-#include "algorithm/basic/leet_code_15_three_sum.h"
-#include "algorithm/basic/recurrence.h"
-#include "algorithm/basic/recursion.h"
-#include "algorithm/basic/ternary_search.h"
+#include "algorithm/easy/bitwise.h"
+#include "algorithm/easy/leet_code_1_two_sum.h"
+#include "algorithm/easy/leet_code_15_three_sum.h"
+#include "algorithm/easy/recurrence.h"
+#include "algorithm/easy/recursion.h"
 
 // test data for recursion, recurrence, iteration
 const int fibonacci[30] = {0, 1, 1, 2, 3, 5, 8, 13, 21, 34,
                            55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181,
                            6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229};
 
-// test data for array search
-#define count 15
-const int sortedArray[count] = {0, 0, 1, 1, 2, 3, 4, 5, 6, 7, 7, 7, 7, 7, 9};
-const int upTernaryArray[count] = {-5, 0, 1, 1, 2, 3, 9, 6, 5, 4, 3, 2, 1, 0, -5};
-const int downTernaryArray[count] = {9, 8, 7, 6, 5, 4, 3, -50, -25, -3, 7, 15, 66, 77, 95};
+// test data for bitwise operation
+const int twoNumberAppearsOnceArray[16] = {3, 5, 9, 0, 1, 7, 3, 9, 7, 1, 5, 2, 4, 6, 0, 4};
+const int twoNumberAppearsOnceArrayResult[2] = {2, 6};
 
-TEST(basicTest, fibonacciRS)
+int twoNumberAppearsOnce2Array[13] = {3, 5, 9, 0, 1, 3, 5, 9, 0, 0, 5, 3, 9};
+
+TEST(easyTest, findNumberAppearsOnce)
+{
+    auto result1 = findNumberAppearsOnce(twoNumberAppearsOnceArray, 16);
+    EXPECT_EQ(result1.size(), 2);
+
+    for (const auto& i : result1)
+    {
+        EXPECT_TRUE(existsInArray(twoNumberAppearsOnceArrayResult, 2, i));
+    }
+}
+
+TEST(easyTest, findNumberAppearsOnce2)
+{
+    int result1 = findNumberAppearsOnce2(twoNumberAppearsOnce2Array, 13);
+    EXPECT_EQ(result1, 1);
+}
+
+TEST(easyTest, fibonacciRS)
 {
     int result1 = fibonacciRS(15);
     EXPECT_EQ(result1, 610);
@@ -35,7 +51,7 @@ TEST(basicTest, fibonacciRS)
     EXPECT_EQ(result2, 75025);
 }
 
-TEST(basicTest, fibonacciRR)
+TEST(easyTest, fibonacciRR)
 {
     int result1 = fibonacciRR(15);
     EXPECT_EQ(result1, 610);
@@ -44,25 +60,7 @@ TEST(basicTest, fibonacciRR)
     EXPECT_EQ(result2, 75025);
 }
 
-TEST(basicTest, binarySearch)
-{
-    int position = binarySearch(sortedArray, 0, count - 1, 3);
-    EXPECT_EQ(position, 5);
-}
-
-TEST(basicTest, ternarySearchUp)
-{
-    int position = ternarySearch(upTernaryArray, 0, count - 1, 0);
-    EXPECT_EQ(position, 6);
-}
-
-TEST(basicTest, ternarySearchDown)
-{
-    int position = ternarySearch(downTernaryArray, 0, count - 1, 1);
-    EXPECT_EQ(position, 7);
-}
-
-TEST(basicTest, p1)
+TEST(easyTest, p1)
 {
     Solution1 solution;
 
@@ -82,7 +80,7 @@ TEST(basicTest, p1)
     EXPECT_EQ(result3[0] + result3[1], 3);      // [1] + [2]
 }
 
-TEST(basicTest, p15)
+TEST(easyTest, p15)
 {
     Solution15 solution;
 

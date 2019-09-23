@@ -6,8 +6,8 @@
 //  Copyright © 2019 Vincent Zeng. All rights reserved.
 //
 
-#ifndef dp_leet_code_28_implement_strstr_h
-#define dp_leet_code_28_implement_strstr_h
+#ifndef string_leet_code_28_implement_strstr_h
+#define string_leet_code_28_implement_strstr_h
 
 #include "util/int_util.h"
 #include "util/leet_code_util.h"
@@ -86,4 +86,4 @@ private:
     }
 };
 
-#endif // dp_leet_code_28_implement_strstr_h
+#endif // string_leet_code_28_implement_strstr_h

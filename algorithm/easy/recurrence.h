@@ -6,8 +6,8 @@
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
-#ifndef basic_recurrence_h
-#define basic_recurrence_h
+#ifndef easy_recurrence_h
+#define easy_recurrence_h
 
 #include "util/int_util.h"
 
@@ -49,4 +49,4 @@ int numberOfFactorialEndZero(int n)
     return result;
 }
 
-#endif // basic_recurrence_h
+#endif // easy_recurrence_h

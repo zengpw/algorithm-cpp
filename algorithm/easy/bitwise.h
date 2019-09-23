@@ -6,8 +6,8 @@
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
-#ifndef basic_bitwise_h
-#define basic_bitwise_h
+#ifndef easy_bitwise_h
+#define easy_bitwise_h
 
 #include "util/int_util.h"
 
@@ -116,4 +116,4 @@ int findNumberAppearsOnce2(int array[], int length)
 //              这样剩下的数据就变成 findNumberAppearsOnce 题型处理的场景了
 //
 
-#endif // basic_bitwise_h
+#endif // easy_bitwise_h

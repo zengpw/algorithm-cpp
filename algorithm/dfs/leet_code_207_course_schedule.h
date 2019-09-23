@@ -6,8 +6,8 @@
 //  Copyright © 2019 Vincent Zeng. All rights reserved.
 //
 
-#ifndef tree_leet_code_207_course_schedule_h
-#define tree_leet_code_207_course_schedule_h
+#ifndef dfs_leet_code_207_course_schedule_h
+#define dfs_leet_code_207_course_schedule_h
 
 #include "util/leet_code_util.h"
 
@@ -85,4 +85,4 @@ private:
     }
 };
 
-#endif // tree_leet_code_207_course_schedule_h
+#endif // dfs_leet_code_207_course_schedule_h

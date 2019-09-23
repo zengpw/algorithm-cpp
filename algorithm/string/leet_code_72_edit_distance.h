@@ -6,8 +6,8 @@
 //  Copyright © 2019 Vincent Zeng. All rights reserved.
 //
 
-#ifndef dp_leet_code_72_edit_distance_h
-#define dp_leet_code_72_edit_distance_h
+#ifndef string_leet_code_72_edit_distance_h
+#define string_leet_code_72_edit_distance_h
 
 #include "util/int_util.h"
 #include "util/leet_code_util.h"
@@ -55,4 +55,4 @@ public:
     }
 };
 
-#endif // dp_leet_code_72_edit_distance_h
+#endif // string_leet_code_72_edit_distance_h

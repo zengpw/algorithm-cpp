@@ -28,7 +28,7 @@ int* createTestArray()
     memcpy(array, unsortedArray, arraySize);
     
     std::cout << std::endl;
-    printIntArray(array, count);
+//    printIntArray(array, count);
     
     return array;
 }

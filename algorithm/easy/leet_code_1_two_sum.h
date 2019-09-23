@@ -6,8 +6,8 @@
 //  Copyright © 2019 Vincent Zeng. All rights reserved.
 //
 
-#ifndef basic_leet_code_1_two_sum_h
-#define basic_leet_code_1_two_sum_h
+#ifndef easy_leet_code_1_two_sum_h
+#define easy_leet_code_1_two_sum_h
 
 #include "util/leet_code_util.h"
 
@@ -47,4 +47,4 @@ public:
     }
 };
 
-#endif // basic_leet_code_1_two_sum_h
+#endif // easy_leet_code_1_two_sum_h

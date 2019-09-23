@@ -6,8 +6,8 @@
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
-#ifndef basic_ternary_search_h
-#define basic_ternary_search_h
+#ifndef search_ternary_search_h
+#define search_ternary_search_h
 
 #include "util/int_util.h"
 
@@ -28,8 +28,8 @@ int ternarySearch(const int array[], const int low, const int high, int directio
 
     while (true)
     {
-        printELement(array, m1);
-        printELement(array, m2);
+//        printELement(array, m1);
+//        printELement(array, m2);
 
         if (m1 == l && m2 == r)
         {
@@ -50,4 +50,4 @@ int ternarySearch(const int array[], const int low, const int high, int directio
     }
 }
 
-#endif // basic_ternary_search_h
+#endif // search_ternary_search_h

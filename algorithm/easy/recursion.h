@@ -6,8 +6,8 @@
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
-#ifndef basic_recursion_h
-#define basic_recursion_h
+#ifndef easy_recursion_h
+#define easy_recursion_h
 
 #include "util/int_util.h"
 
@@ -20,4 +20,4 @@ int fibonacciRS(int n)
     return fibonacciRS(n - 1) + fibonacciRS(n - 2);
 }
 
-#endif // basic_recursion_h
+#endif // easy_recursion_h

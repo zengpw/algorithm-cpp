@@ -6,8 +6,8 @@
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
-#ifndef basic_binary_search_h
-#define basic_binary_search_h
+#ifndef search_binary_search_h
+#define search_binary_search_h
 
 #include "util/int_util.h"
 
@@ -22,7 +22,7 @@ int binarySearch(const int array[], const int low, const int high, const int ele
     
     while (element != array[m])
     {
-        printELement(array, m);
+//        printELement(array, m);
 
         if (element < array[m])
         {
@@ -40,4 +40,4 @@ int binarySearch(const int array[], const int low, const int high, const int ele
     return m;
 }
 
-#endif // basic_binary_search_h
+#endif // search_binary_search_h
