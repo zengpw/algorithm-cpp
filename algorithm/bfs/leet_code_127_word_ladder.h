@@ -15,70 +15,60 @@ using namespace std;
 
 //
 //  https://leetcode.com/problems/word-ladder/
-//  题意： 每次只替换 1 个字母，求单词 A 到 B 的最短距离
+//  题意： 一个数组中包含若干个单词，每次只替换 1 个字母，求 “数组中” 单词 A 变形为 单词 B 的最短距离
 //
 class Solution127
 {
 private:
-    queue<pair<string, int>> nQueue;           // pair<单词, 该单词到 A 的距离>
+    queue<pair<string, int>> wordQueue;                  // 每个匹配的单词，以及从 A 到该单词的 变形次数
+    unordered_set<string> wordSet;
 public:
-    int ladderLength(string beginWord, string endWord, vector<string>& wordList)
+    int ladderLength(string beginWord, string endWord, vector<string> &wordList)
     {
-        // clear
-        queue<pair<string, int>> empty;
-        swap(empty, nQueue);
+        // 用来替代入参中的数组，实现快速删除
+        copy(wordList.begin(), wordList.end(), inserter(wordSet, wordSet.end()));
 
-        // unordered_set 方便查找和删除
-        unordered_set<string> wordSet(wordList.begin(), wordList.end());
-
-        // 首先排除掉 2 种特殊情况
+        // 处理特殊情况
         if (beginWord == endWord || wordSet.count(endWord) == 0)
             return 0;
 
-        // 初始化结果为 0 (找不到路径的情况)
-        int result = 0;
+        // 初始化处理队列
+        wordQueue.emplace(make_pair(beginWord, 1));
 
-        // 将起点入队
-        nQueue.push(make_pair(beginWord, 1));
-
-        while (!nQueue.empty())
+        while (!wordQueue.empty())
         {
-            auto word = nQueue.front();
+            auto wordPair = wordQueue.front();
 
-            // 出队的是终点值，说明已经找到最短路径
-            if (word.first == endWord)
-            {
-                result = word.second;
-                break;
-            }
+            if (wordPair.first == endWord)
+                return wordPair.second;
+            else
+                bfs(wordPair);
 
-            bfs(wordSet, word);
-            nQueue.pop();
+            wordQueue.pop();
         }
 
-        return result;
+        return 0;
     }
 
 private:
-    void bfs(unordered_set<string>& wordSet, pair<string, int>& item)
+    void bfs(const pair<string, int> &wordPair)
     {
-        string word = item.first;
-        int level = item.second;
+        auto word = wordPair.first;
 
         // 遍历 word 的每一个字母，依次将其第 i 位替换为 26 个字母中的一个
         for (int i = 0; i < word.length(); ++i)
         {
-            string srcTemp(word);
-
-            // 不论 wordSet 有多大，循环次数固定为 26 次
+            string wordNew = word;
+            
+            // 循环次数固定为 26 次
             for (int j = 0; j < 26; ++j)
             {
-                srcTemp[i] = 'a' + j;
+                wordNew[i] = 'a' + j;
 
-                if (wordSet.count(srcTemp) > 0)
+                if (wordSet.count(wordNew) != 0)
                 {
-                    nQueue.push(make_pair(srcTemp, level + 1));
-                    wordSet.erase(srcTemp);
+                    wordQueue.emplace(make_pair(wordNew, wordPair.second + 1));
+                    wordSet.erase(wordNew);
                 }
             }
         }
