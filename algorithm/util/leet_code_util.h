@@ -15,8 +15,9 @@
 #include <map>
 #include <numeric>
 #include <queue>
-#include <stack>
+#include <set>
 #include <sstream>
+#include <stack>
 #include <string>
 #include <unordered_map>
 #include <unordered_set>
@@ -25,8 +26,32 @@
 class stlUtil
 {
 public:
-    template <typename T>
-    static std::string vectorVector2String(std::vector<std::vector<T>>& vv)
+    template<typename T>
+    static std::string vector2String(std::vector<T> &v)
+    {
+        std::stringstream ss;
+        std::string resultString;
+
+        for (int i = 0; i < v.size(); ++i)
+        {
+            ss << v[i];
+            resultString += ss.str();
+
+            if (i < v.size() - 1)
+            {
+                resultString += " ";
+            }
+
+            // clear buffer
+            ss.str("");
+            ss.clear();
+        }
+
+        return resultString;
+    }
+
+    template<typename T>
+    static std::string vectorVector2String(std::vector<std::vector<T>> &vv)
     {
         std::stringstream ss;
         std::string resultString;
@@ -57,40 +82,19 @@ public:
         return resultString;
     }
 
-    template <typename T>
-    static void printVectorVector(std::vector<std::vector<T>>& vv)
+    template<typename T>
+    static void printVectorVector(std::vector<std::vector<T>> &vv)
     {
         std::cout << "Vector = " << vectorVector2String<T>(vv) << std::endl;
     }
 
-    template <typename T>
-    static std::string vector2String(std::vector<T>& v)
+    template<typename T>
+    static void vectorVector2StringVector(std::vector<std::vector<T>> &vv, std::vector<std::string> &output)
     {
-        std::stringstream ss;
-        std::string resultString;
-
-        for (int i = 0; i < v.size(); ++i)
+        for (auto &v : vv)
         {
-            ss << v[i];
-            resultString += ss.str();
-
-            if (i < v.size() - 1)
-            {
-                resultString += " ";
-            }
-
-            // clear buffer
-            ss.str("");
-            ss.clear();
+            output.push_back(vector2String(v));
         }
-
-        return resultString;
-    }
-
-    template <typename T>
-    void clearQueue(std::queue<T>& q) {
-        std::queue<T> empty;
-        swap(empty, q);
     }
 };
 
@@ -106,11 +110,14 @@ namespace treeUtil
      * };
      */
 
-    struct TreeNode {
+    struct TreeNode
+    {
         int val;
         TreeNode *left;
         TreeNode *right;
-        TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+
+        TreeNode(int x) : val(x), left(NULL), right(NULL)
+        {}
     };
 }
 

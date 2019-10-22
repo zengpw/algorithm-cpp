@@ -72,4 +72,3 @@ static void printELement(const int *array, const int element)
 }
 
 #endif // util_int_util_h
-
