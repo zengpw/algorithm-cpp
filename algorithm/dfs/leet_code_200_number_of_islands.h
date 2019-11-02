@@ -6,8 +6,8 @@
 //  Copyright © 2019 Vincent Zeng. All rights reserved.
 //
 
-#ifndef bfs_leet_code_200_number_of_islands_h
-#define bfs_leet_code_200_number_of_islands_h
+#ifndef dfs_leet_code_200_number_of_islands_h
+#define dfs_leet_code_200_number_of_islands_h
 
 #include "util/leet_code_util.h"
 
@@ -34,7 +34,7 @@ public:
                 if (grid[i][j] == '1')
                 {
                     numberOfIslands++;
-                    bfs(grid, make_pair(i, j));
+                    dfs(grid, make_pair(i, j));
                 }
             }
         }
@@ -43,7 +43,7 @@ public:
     }
 
 private:
-    void bfs(vector<vector<char>> &grid, pair<int, int> item)
+    void dfs(vector<vector<char>> &grid, pair<int, int> item)
     {
         auto x = item.first;
         auto y = item.second;
@@ -59,12 +59,12 @@ private:
             grid[x][y] = '0';
 
             // 处理上下左右
-            bfs(grid, make_pair(x - 1, y));
-            bfs(grid, make_pair(x + 1, y));
-            bfs(grid, make_pair(x, y - 1));
-            bfs(grid, make_pair(x, y + 1));
+            dfs(grid, make_pair(x - 1, y));
+            dfs(grid, make_pair(x + 1, y));
+            dfs(grid, make_pair(x, y - 1));
+            dfs(grid, make_pair(x, y + 1));
         }
     }
 };
 
-#endif // bfs_leet_code_200_number_of_islands_h
+#endif // dfs_leet_code_200_number_of_islands_h

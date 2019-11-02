@@ -12,7 +12,6 @@
 
 #include "algorithm/bfs/leet_code_127_word_ladder.h"
 #include "algorithm/bfs/leet_code_130_surrounded_regions.h"
-#include "algorithm/bfs/leet_code_200_number_of_islands.h"
 
 TEST(bfsTest, p127)
 {
@@ -55,25 +54,4 @@ TEST(bfsTest, p130)
     std::string strBoardFlipped = stlUtil::vectorVector2String<char>(boardFlipped);
 
     EXPECT_STREQ(strBoard.c_str(), strBoardFlipped.c_str());
-}
-
-TEST(bfsTest, p200)
-{
-    Solution200 solution;
-
-    vector<vector<char>> grids1 = {{'1', '1', '1', '1', '0'},
-                                   {'1', '1', '0', '1', '0'},
-                                   {'1', '1', '0', '0', '0'},
-                                   {'0', '0', '0', '0', '0'}};
-
-    auto result1 = solution.numIslands(grids1);
-    EXPECT_EQ(1, result1);
-
-    vector<vector<char>> grids2 = {{'1', '1', '0', '0', '0'},
-                                   {'1', '1', '0', '0', '0'},
-                                   {'0', '0', '1', '0', '0'},
-                                   {'0', '0', '0', '1', '1'}};
-
-    auto result2 = solution.numIslands(grids2);
-    EXPECT_EQ(3, result2);
 }
