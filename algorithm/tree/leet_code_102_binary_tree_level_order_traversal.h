@@ -16,47 +16,45 @@ using TreeNode = treeUtil::TreeNode;
 
 //
 //  https://leetcode.com/problems/binary-tree-level-order-traversal/
-//  题意： 按层遍历二叉树
+//  题意： 按层遍历二叉树，用 BFS 实现
 //
 class Solution102
 {
 private:
-    queue<TreeNode*> nQueue;
+    queue<TreeNode *> nQueue;
 public:
-    vector<vector<int>> levelOrder(TreeNode* root)
+    vector<vector<int>> levelOrder(TreeNode *root)
     {
-        // 整体思路是用 BFS 实现
-        vector<vector<int>> resultGroup;
-
-        // clear
-        queue<TreeNode*> empty;
-        swap(empty, nQueue);
+        vector<vector<int>> result;
 
         if (root == nullptr)
-            return resultGroup;
-        else
-            nQueue.emplace(root);
+            return result;
 
+        // clear
+        queue<TreeNode *> empty;
+        swap(nQueue, empty);
+
+        nQueue.emplace(root);
         while (!nQueue.empty())
         {
-            // 一次性处理同一层的所有数据，实现按层处理
-            int size = nQueue.size();
-            vector<int> values;
+            vector<int> level;
 
-            for (int i = 0; i < size; ++i)
+            // 一次性处理同一层的所有数据，实现按层处理
+            int nums = nQueue.size();
+            for (int i = 0; i < nums; ++i)
             {
-                TreeNode* node = nQueue.front();
+                auto node = nQueue.front();
                 nQueue.pop();
 
-                values.push_back(node->val);
+                level.push_back(node->val);
                 if (node->left != nullptr) nQueue.emplace(node->left);
                 if (node->right != nullptr) nQueue.emplace(node->right);
             }
 
-            resultGroup.push_back(values);
+            result.push_back(level);
         }
 
-        return resultGroup;
+        return result;
     }
 };
 

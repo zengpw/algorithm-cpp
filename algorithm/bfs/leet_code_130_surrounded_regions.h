@@ -24,6 +24,10 @@ private:
 public:
     void solve(vector<vector<char>> &board)
     {
+        // clear
+        queue<pair<int, int>> empty;
+        swap(nQueue, empty);
+
         if (board.size() == 0)
             return;
         

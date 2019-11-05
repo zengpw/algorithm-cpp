@@ -25,6 +25,11 @@ private:
 public:
     int ladderLength(string beginWord, string endWord, vector<string> &wordList)
     {
+        // clear
+        wordSet.clear();
+        queue<pair<string, int>> empty;
+        swap(wordQueue, empty);
+
         // 用来替代入参中的数组，实现快速删除
         copy(wordList.begin(), wordList.end(), inserter(wordSet, wordSet.end()));
 
