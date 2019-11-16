@@ -6,8 +6,8 @@
 //  Copyright © 2019 Vincent Zeng. All rights reserved.
 //
 
-#ifndef dp_leet_code_5_longest_palindromic_substring_h
-#define dp_leet_code_5_longest_palindromic_substring_h
+#ifndef dp_maximum_leet_code_5_longest_palindromic_substring_h
+#define dp_maximum_leet_code_5_longest_palindromic_substring_h
 
 #include "util/int_util.h"
 #include "util/leet_code_util.h"
@@ -28,45 +28,31 @@ public:
 
         // 此题据说用 vector 会超时，改用 C 数组
         // dp[i][j], i = 子串首地址, j = 子串尾地址
-        // 实际上这里只用到了一半的数组值，因为 j >= i 才有意义
         int dp[s.length()][s.length()];
 
-        // dp[i][j] 有 3 种取值，先用最劣值进行填充
         // = 0 不是回文
-        // = 1 长度为 1 的回文
+        // = 1 长度为 1 的回文，仅限于 i == j
         // 长度为 j - i + 1 的回文
         memset(dp, 0, sizeof(dp));
 
         // pair<最大回文子串首地址，该子串长度>
         auto result = make_pair(0, 1);
 
-        // 最优子结构: dp[i][j] 依赖于 dp[i + 1][j - 1]
-        // 每次大循环，都会计算 [0 -> (j - 1)][j] 可能存在的回文串
-        // 0: [0][0]
-        // 1: [0][1], [1][1]
-        // 2: [0][2], [1][2], [2][2]
-        // 3: [0][3], [1][3], [2][3], [3][3]
-        // 4: [0][4], [1][4], [2][4], [3][4], [4][4]
-        // 5: [0][5], [1][5], [2][5], [3][5], [4][5], [5][5]
+        // dp[i][j] 依赖于 dp[i + 1][j - 1]
+        // 如果 dp[i + 1][j - 1] 是回文，并且 s[i] == s[j]
+        // 那么 dp[i][j] 是回文，并且回文长度 dp[i][j] = j - i + 1
         for (int j = 0; j < s.length(); ++j)
         {
-            // 该次循环的边界值（明显最优解）
             dp[j][j] = 1;
 
-            // 判断 [0 -> (j - 2)][j] 是否是回文，并计算长度
-            // 规模 n 依赖于 n - 1 的最优解
             for (int i = 0; i < j; ++i)
             {
-                if (i < j - 1)
+                if (s[i] == s[j])
                 {
-                    if (s[i] == s[j] && dp[i + 1][j - 1] > 0)
-                        dp[i][j] = j - i + 1;
-                }
-                else
-                {
-                    // [j - 1][j] 的情况也要特殊处理，不能套用递推公式
-                    if (s[i] == s[j])
+                    if (j == i + 1)
                         dp[i][j] = 2;
+                    else if (dp[i + 1][j - 1] > 0)
+                        dp[i][j] = j - i + 1;
                 }
 
                 if (dp[i][j] > result.second)
@@ -78,4 +64,4 @@ public:
     }
 };
 
-#endif // dp_leet_code_5_longest_palindromic_substring_h
+#endif // dp_maximum_leet_code_5_longest_palindromic_substring_h

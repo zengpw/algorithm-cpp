@@ -6,8 +6,8 @@
 //  Copyright © 2019 Vincent Zeng. All rights reserved.
 //
 
-#ifndef dp_leet_code_53_maximum_subarray_h
-#define dp_leet_code_53_maximum_subarray_h
+#ifndef dp_maximum_leet_code_53_maximum_subarray_h
+#define dp_maximum_leet_code_53_maximum_subarray_h
 
 #include "util/int_util.h"
 #include "util/leet_code_util.h"
@@ -31,13 +31,11 @@ public:
         vector<int> dp(nums.size(), 0);
         result = dp[0] = nums[0];
 
+        // dp[i] -> 如果序列的最后一位是 i, 则 序列的和 最大值为 dp[i]
         for (int i = 1; i < nums.size(); ++i)
         {
-            if (dp[i - 1] > 0)
-                dp[i] = dp[i - 1] + nums[i];
-            else
-                dp[i] = nums[i];
-
+            dp[i] = nums[i];
+            dp[i] = max(dp[i], dp[i - 1] + nums[i]);
             result = max(result, dp[i]);
         }
 
@@ -45,4 +43,4 @@ public:
     }
 };
 
-#endif // dp_leet_code_53_maximum_subarray_h
+#endif // dp_maximum_leet_code_53_maximum_subarray_h

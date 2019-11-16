@@ -10,8 +10,22 @@
 
 #include "algorithm/util/leet_code_util.h"
 
+#include "algorithm/string/leet_code_14_longest_common_prefix.h"
 #include "algorithm/string/leet_code_28_implement_strstr.h"
 #include "algorithm/string/leet_code_72_edit_distance.h"
+
+TEST(dpTest, p14)
+{
+    Solution14 solution;
+
+    vector<string> strs1 = {"flower", "flow", "flight"};
+    string result1 = solution.longestCommonPrefix(strs1);
+    EXPECT_STREQ(result1.c_str(), "fl");
+
+    vector<string> strs2 = {"dog", "racecar", "car"};
+    string result2 = solution.longestCommonPrefix(strs2);
+    EXPECT_STREQ(result2.c_str(), "");
+}
 
 TEST(stringTest, p28)
 {

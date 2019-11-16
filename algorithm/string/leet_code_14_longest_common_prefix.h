@@ -6,8 +6,8 @@
 //  Copyright © 2019 Vincent Zeng. All rights reserved.
 //
 
-#ifndef dp_leet_code_14_longest_common_prefix_h
-#define dp_leet_code_14_longest_common_prefix_h
+#ifndef string_leet_code_14_longest_common_prefix_h
+#define string_leet_code_14_longest_common_prefix_h
 
 #include "util/int_util.h"
 #include "util/leet_code_util.h"
@@ -16,7 +16,7 @@ using namespace std;
 
 //
 //  https://leetcode.com/problems/longest-common-prefix/
-//  题意： 最长公共前缀
+//  题意： 求最长公共前缀，普通 string 题型，暴力循环 + 排除法
 //
 class Solution14
 {
@@ -43,4 +43,4 @@ public:
     }
 };
 
-#endif // dp_leet_code_14_longest_common_prefix_h
+#endif // string_leet_code_14_longest_common_prefix_h
