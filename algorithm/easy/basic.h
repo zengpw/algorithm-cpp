@@ -1,18 +1,36 @@
 //
-//  recurrence.h
+//  basic.h
 //  algorithm-cpp
 //
 //  Created by Vincent Zeng on 2019/3/16.
 //  Copyright © 2018 Vincent Zeng. All rights reserved.
 //
 
-#ifndef easy_recurrence_h
-#define easy_recurrence_h
+#ifndef easy_basic_h
+#define easy_basic_h
 
 #include "util/int_util.h"
 
 // Fibonacci sequence
-int fibonacciRR(int n)
+// f(1) = 1, f(2) = 1, f(3) = f(1) + f(2), f(n) = f(n - 1) + f(n - 2)
+//
+// last: f(n - 1)
+// current: f(n)
+//
+int fibonacciRecursionTail(int n, int last, int current)
+{
+    if (n <= 2) return current;
+    return fibonacciRecursionTail(n - 1, current, last + current);
+}
+
+// Fibonacci 尾递归版本
+int fibonacciRecursion(int n)
+{
+    return fibonacciRecursionTail(n, 1, 1);
+}
+
+// Fibonacci 递推循环版本
+int fibonacciRecurrence(int n)
 {
     int i = 0;
     int j = 1;
@@ -49,4 +67,4 @@ int numberOfFactorialEndZero(int n)
     return result;
 }
 
-#endif // easy_recurrence_h
+#endif // easy_basic_h

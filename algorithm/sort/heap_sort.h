@@ -15,7 +15,6 @@ void minHeapSort(int array[], int n)
 {
     // 大小为 n 的数组，根结点为 0, 最后一个分支结点为 n/2 - 1
     // 从最后一个分支结点开始处理，处理所有非叶子结点
-    // TODO: 改为只处理最后一层非叶子结点
     for (int k = n/2 - 1; k >= 0; k--)
     {
         int i = k;
@@ -26,14 +25,13 @@ void minHeapSort(int array[], int n)
             // 保存当前结点位置
             int origin = i;
 
-            // 计算左右子结点、父结点
-            // 结点 i 的左右孩子结点位置分别为 2i + 1, 2i + 2
-            // 结点 i 的父节点为 (i - 1)/2
+            // 左右子结点、父结点坐标
             int left = 2*i + 1;
             int right = 2*i + 2;
             int parent = (i - 1)/2;
 
-            // 右子树存在 && 右子树最小 -> 和右子树交换
+            // 分别和左右子树比较
+            // 右子树存在 && 右子树最小 -> 和右子树交换，然后移动到右子树进行处理
             if (right < n &&
                 array[right] < array[left] &&
                 array[right] < array[i])
@@ -44,7 +42,7 @@ void minHeapSort(int array[], int n)
             else if (left < n &&
                      array[left] < array[i])
             {
-                // 排除右子树交换的场景后，如果左子树存在且最小 -> 和左子树交换
+                // 左子树存在 && 左子树最小 -> 和左子树交换，然后移动到左子树进行处理
                 swapIntArrayElement(array, i, left);
                 i = left;
             }

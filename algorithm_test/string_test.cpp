@@ -14,7 +14,7 @@
 #include "algorithm/string/leet_code_28_implement_strstr.h"
 #include "algorithm/string/leet_code_72_edit_distance.h"
 
-TEST(dpTest, p14)
+TEST(stringTest, p14)
 {
     Solution14 solution;
 

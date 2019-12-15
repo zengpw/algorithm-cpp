@@ -16,42 +16,49 @@ using namespace std;
 
 //
 //  https://leetcode.com/problems/edit-distance/
-//  题意： 字符串题型 - 最小编辑距离
+//  题意： 字符串题型 - 最小编辑距离 ED
 //
 class Solution72
 {
 public:
     int minDistance(string word1, string word2)
     {
-        // dp[i][j] = word1.i 到 word.j 的距离
-        // 需要额外增加一行和一列，代表最复杂的情况(word1, word2 是空串)
-        int dp[word1.size() + 1][word2.size() + 1];
+        int x = word2.size() + 1;
+        int y = word1.size() + 1;
+
+        // dp[][] -> 行代表源单词 word1, 列代表目标单词 word2
+        // dp[i][j] -> 从 abcd 的前 j 个字符转换到 acd 的前 i 个字符所需要的操作次数
+        int dp[x][y];
         memset(dp, 0, sizeof(dp));
 
-        // 处理最复杂的情况（同时也是边界值）
-        int x = 0, y = 0;
-        // 第一行
-        generate_n(&dp[0][0], word2.size() + 1, [&x] () mutable -> int {
-            return x++;
-        });
-        // 第一列
-        for (int k = 0; k <= word1.size(); ++k)
+        // 第一列 dp[0, n][0] 的值 -> 往下走 = 插入操作 -> dp[i][j] = dp[i - 1][j] + 1
+        for (int i = 0; i < x; ++i)
         {
-            dp[k][0] = y++;
+            dp[i][0] = i;
         }
 
-        for (int i = 1; i <= word1.size(); ++i)
+        // 第一行 dp[0][0, n] 的值 -> 往右走 = 删除操作 -> dp[i][j] = dp[i][j - 1] + 1
+        for (int j = 0; j < y; ++j)
         {
-            for (int j = 1; j <= word2.size(); ++j)
+            dp[0][j] = j;
+        }
+
+        for (int i = 1; i < x; ++i)
+        {
+            for (int j = 1; j < y; ++j)
             {
-                if (word1[i - 1] == word2[j - 1])
+                // 因为 i, j 从 1 开始，所以此处要 -1
+                // 如果 src[i] == src[j], 则 dp[i][j] = 左上值，代表操作次数不变
+                // 如果 src[i] != src[j], 则 dp[i][j] = 左、上、左上 的最小值 + 1
+                // 如果采用了 左上 的最小值 -> 往右下走 = 替换操作
+                if (word1[j - 1] == word2[i - 1])
                     dp[i][j] = dp[i - 1][j - 1];
                 else
-                    dp[i][j] = min(min(dp[i - 1][j], dp[i][j - 1]), dp[i - 1][j - 1]) + 1;
+                    dp[i][j] = min(min(dp[i][j - 1], dp[i - 1][j]), dp[i - 1][j - 1]) + 1;
             }
         }
 
-        return dp[word1.size()][word2.size()];
+        return dp[x - 1][y - 1];
     }
 };
 

@@ -20,56 +20,51 @@ void mMerge(int array[], int unsortedArray[], int low, int mid, int high)
     }
     
     // 从额外空间 merge 数据到原数据区
-    int s1 = low;
-    int s2 = mid + 1;
-    int k = low;
+    int p1 = low;
+    int p2 = mid + 1;
     
-    while (k <= high)
+    while (low <= high)
     {
-        // s1 移动完毕
-        if (s1 > mid)
+        // 将另一序列剩下的所有元素直接复制到原始数组末尾
+        if (p1 > mid)
         {
-            array[k++] = unsortedArray[s2++];
+            array[low++] = unsortedArray[p2++];
             continue;
         }
-        // s2 移动完毕
-        if (s2 > high)
+        if (p2 > high)
         {
-            array[k++] = unsortedArray[s1++];
+            array[low++] = unsortedArray[p1++];
             continue;
         }
-        // s1 比 s2 小，复制 s1 数据回原数据区
-        if (unsortedArray[s1] <= unsortedArray[s2])
-            array[k++] = unsortedArray[s1++];
+        // 复制 左区间 数据回原数据区
+        if (unsortedArray[p1] <= unsortedArray[p2])
+            array[low++] = unsortedArray[p1++];
         
-        // s1 比 s2 大，复制 s2 数据回原数据区
-        if (unsortedArray[s1] > unsortedArray[s2])
-            array[k++] = unsortedArray[s2++];
+        // 复制 右区间 数据回原数据区
+        if (unsortedArray[p1] > unsortedArray[p2])
+            array[low++] = unsortedArray[p2++];
     }
 }
 
-// 排序
 // 可以在元素个数小于7的时候采用插入排序
-// 本实现中数据分成2部分，实际上是只在 mMerge() 函数中做排序
 void mSort(int array[], int unsortedArray[], int low, int high)
 {
     if (low >= high)
         return;
     
     int mid = low + (high - low)/2;
-    
-    // 分成2个数据区
+
+    // 拆分成2个数据区
     mSort(array, unsortedArray, low, mid);
     mSort(array, unsortedArray, mid + 1, high);
-    // 合并数据区
+    // 合并数据区，只在 mMerge() 函数中做排序
     mMerge(array, unsortedArray, low, mid, high);
 }
 
-// 合并（归并）排序
+// 归并排序
 void mergeSort(int array[], int arraySize)
 {
     auto unsortedArray = (int*)malloc(sizeof(int)*arraySize);
-    
     memset(unsortedArray, 0, arraySize);
     
     mSort(array, unsortedArray, 0, arraySize - 1);

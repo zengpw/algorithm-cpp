@@ -22,8 +22,6 @@ int binarySearch(const int array[], const int low, const int high, const int ele
     
     while (element != array[m])
     {
-//        printELement(array, m);
-
         if (element < array[m])
         {
             r = m - 1;

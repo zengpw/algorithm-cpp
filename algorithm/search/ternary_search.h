@@ -28,9 +28,6 @@ int ternarySearch(const int array[], const int low, const int high, int directio
 
     while (true)
     {
-//        printELement(array, m1);
-//        printELement(array, m2);
-
         if (m1 == l && m2 == r)
         {
             return m1 + 1;
