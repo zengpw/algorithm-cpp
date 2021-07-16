@@ -1,6 +1,6 @@
 # algorithm-cpp
 [![Build Status](https://www.travis-ci.org/zengpw/algorithm-cpp.svg?branch=master)](https://www.travis-ci.org/zengpw/algorithm-cpp)
-> 练习算法和数据结构
+> 练习算法
 
 ## Problems
 Path | [LeetCode](https://leetcode.com/problemset/all/)
@@ -17,28 +17,25 @@ sort |
 string | 14 28 72
 tree | 94 102 113 144 145
 
-## Dependencies
-* [gtest 1.8.0](https://github.com/google/googletest/tree/release-1.8.0)
+## Built-in
+* [gtest 1.11.0](https://github.com/google/googletest/releases/tag/release-1.11.0)
 
 ## Development Environment
 #### Win
-* [MinGW](https://nuwen.net/mingw.html) + [CLion](https://www.jetbrains.com/clion) (Recommend)
-> You can also using any other GNU compilers + [CMake](https://cmake.org/)
-#### Mac
-* [CMake](https://cmake.org/)
-* [Xcode](https://developer.apple.com/xcode/)
-* [CLion](https://www.jetbrains.com/clion)
-#### Linux
-* [CMake](https://cmake.org/)
-* [CLion](https://www.jetbrains.com/clion)
+* [MinGW (TDM-GCC ver.)](https://jmeubank.github.io/tdm-gcc/)
+* [CMake](https://cmake.org/) with extensions: C/C++, CMake, CMake Tools, C++ TestMate, clangd (recommended, free to coding)
+* [CLion](https://www.jetbrains.com/clion) (optional)
+#### Linux & MacOS
+* GCC + CMake
 
-## Run & Test
-#### Mac
+## Run Test Cases
+#### Win
 ```
-./build_linux_macOS.sh
+./build_win64_mingw.sh
 ./build/algorithm-cpp
 ```
-#### Linux
+
+#### Linux & MacOS
 ```
 ./build_linux_macOS.sh
 ./build/algorithm-cpp

@@ -15,7 +15,7 @@ matrix:
             - cmake
 
 script:
-  - ./build_linux_macOS.sh
+  - ./build_linux_osx.sh
   - ./build/algorithm-cpp
 
 notifications:

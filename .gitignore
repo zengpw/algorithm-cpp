@@ -1,4 +1,16 @@
 
+# cmake
+build
+CMakeFiles
+CMakeCache.txt
+cmake_install.cmake
+install_manifest.txt
+Makefile
+
+# vscode
+.cache
+.vscode
+
 # clion
 .idea
 bin
@@ -11,14 +23,6 @@ Pods/
 *.xcuserstate
 *.xccheckout
 
-# cmake
-build
-CMakeFiles
-CMakeCache.txt
-cmake_install.cmake
-install_manifest.txt
-Makefile
-
 # output
 *.dylib
 *.a
@@ -28,4 +32,3 @@ Makefile
 
 # misc
 .DS_Store
-.vscode

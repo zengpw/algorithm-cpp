@@ -1,45 +1,48 @@
-cmake_minimum_required (VERSION 3.6)
+cmake_minimum_required (VERSION 3.20)
 
 project(algorithm-cpp)
 
 # Include
-include(${PROJECT_SOURCE_DIR}/utils/cmake_config/file.util.cmake)
+include(${PROJECT_SOURCE_DIR}/file.util.cmake)
 
 # Compiler
+set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_POSITION_INDEPENDENT_CODE TRUE)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 if(CMAKE_BUILD_TYPE STREQUAL "DEBUG")
 	set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -DDEBUG")
 endif()
 
+# clangd
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+# GoogleTest as sub module
+include(FetchContent)
+FetchContent_Declare(
+    googletest
+    GIT_REPOSITORY https://gitlab.com/chromiumsrc/googletest.git
+    GIT_TAG        703bd9caab50b139428cea1aaff9974ebee5742e # release-1.11.0, gitlab mirror
+)
+# For Windows: Prevent overriding the parent project's compiler/linker settings
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+# Use GoogleTest
+FetchContent_MakeAvailable(googletest)
+
 # Sources
-append_source_list(src_list SRC_PATH ${PROJECT_SOURCE_DIR}/utils/googletest/googletest/src/gtest-all.cc)
-append_source_list(src_list SRC_PATH ${PROJECT_SOURCE_DIR}/utils/googletest/googletest/src/gtest_main.cc)
-append_source_list(src_list SRC_PATH ${PROJECT_SOURCE_DIR}/algorithm/*.h)
-exclude_source_list(src_list REMOVE_PATH ${PROJECT_SOURCE_DIR}/algorithm/util/*.h)
-append_source_list(src_list SRC_PATH ${PROJECT_SOURCE_DIR}/algorithm_test/*.cpp)
+append_source_list(src_list SRC_PATH ${PROJECT_SOURCE_DIR}/test/*.cpp)
 
 # Targets
 add_executable(${PROJECT_NAME} ${src_list})
 
 # Header Paths
-set(common_inc_path ${PROJECT_SOURCE_DIR}
-					${PROJECT_SOURCE_DIR}/algorithm
-                    ${PROJECT_SOURCE_DIR}/utils/googletest/googletest/include
-                    ${PROJECT_SOURCE_DIR}/utils/googletest/googletest
-                    ${PROJECT_SOURCE_DIR}/utils/googletest/googlemock/include
-                    ${PROJECT_SOURCE_DIR}/utils/googletest/googlemock
-    )
-
-target_include_directories(${PROJECT_NAME} PUBLIC
-	${common_inc_path}
-    )
+target_include_directories(${PROJECT_NAME} PRIVATE
+    ${PROJECT_SOURCE_DIR}
+)
 
 # Dependencies
-find_package(Threads)
+target_link_libraries(${PROJECT_NAME} gtest_main)
 
-target_link_libraries(${PROJECT_NAME}
-    ${CMAKE_THREAD_LIBS_INIT}
-    )
-
+# CTest
+include(GoogleTest)
+enable_testing()
+gtest_discover_tests(${PROJECT_NAME})
