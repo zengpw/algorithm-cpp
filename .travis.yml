@@ -1,25 +1,20 @@
-sudo: false
+dist: focal
 language: cpp
 
-matrix:
-  include:
-    - os: linux
-      compiler: gcc
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-            - george-edison55-precise-backports
-          packages:
-            - cmake-data
-            - cmake
-            
-install:    
+compiler:
+  - gcc
+
+before_install:
+  - sudo apt update
+  - sudo apt remove --purge cmake
+  - sudo apt install libboost-all-dev
+
+install:
   - DEPS_DIR="${TRAVIS_BUILD_DIR}/deps"
   - mkdir ${DEPS_DIR} && cd ${DEPS_DIR}
-  - travis_retry wget --no-check-certificate https://cmake.org/files/v3.17/cmake-3.17.1-Linux-x86_64.tar.gz
-  - tar -xvf cmake-3.17.1-Linux-x86_64.tar.gz > /dev/null
-  - mv cmake-3.17.1-Linux-x86_64 cmake-install
+  - travis_retry wget --no-check-certificate https://cmake.org/files/v3.20/cmake-3.20.0-linux-x86_64.tar.gz
+  - tar -xvf cmake-3.20.0-linux-x86_64.tar.gz > /dev/null
+  - mv cmake-3.20.0-linux-x86_64.tar.gz cmake-install
   - PATH=${DEPS_DIR}/cmake-install:${DEPS_DIR}/cmake-install/bin:$PATH
   - cd ${TRAVIS_BUILD_DIR}
 
