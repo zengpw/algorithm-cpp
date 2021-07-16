@@ -1,8 +1,11 @@
 dist: focal
+
 language: cpp
 
 compiler:
   - gcc
+
+sudo: required
 
 before_install:
   - sudo apt update
